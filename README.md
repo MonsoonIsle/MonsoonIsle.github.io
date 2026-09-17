@@ -1,9 +1,11 @@
 # Monsoon Isle website
 
-Static HTML/CSS site for GitHub Pages. No build step, external fonts or site analytics. The homepage defaults to English; a small local script switches to Chinese and stores the preference in the browser.
+Static HTML/CSS site for GitHub Pages. No build step, external fonts or site analytics. English and Chinese are independent static pages under /en/ and /zh/. The root redirects to /en/. Language links open the equivalent page, and the URL always determines the language. No JavaScript or browser storage is required.
 
-- Home: https://monsoonisle.github.io/
-- The Arrow privacy policy: https://monsoonisle.github.io/games/the-arrow/privacy/
+- English home: https://monsoonisle.github.io/en/
+- Chinese home: https://monsoonisle.github.io/zh/
+- English privacy policy (Google Play): https://monsoonisle.github.io/en/games/the-arrow/privacy/
+- Chinese privacy policy: https://monsoonisle.github.io/zh/games/the-arrow/privacy/
 
 ## Preview
 
@@ -23,4 +25,4 @@ Commit and push to the branch configured in Settings → Pages. This change has 
 
 ## Add another game
 
-Add games/<game-slug>/privacy/index.html and a card on index.html. Use stable directory URLs, and update sitemap.xml.
+Add matching pages under en/games/<game-slug>/privacy/ and zh/games/<game-slug>/privacy/. Add a game card to each language homepage, matching language links, canonical and hreflang links, and update sitemap.xml.
