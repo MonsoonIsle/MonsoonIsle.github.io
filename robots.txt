@@ -1,0 +1,3 @@
+User-agent: *
+Allow: /
+Sitemap: https://monsoonisle.github.io/sitemap.xml
