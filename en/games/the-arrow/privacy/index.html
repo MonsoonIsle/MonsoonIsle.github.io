@@ -1,15 +1,167 @@
 <!doctype html>
 <html lang="en">
-<head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
-<title>The Arrow — Privacy Policy | Monsoon Isle</title><meta name="description" content="Privacy policy for The Arrow: local saves, AdMob advertising, Firebase Analytics and data deletion."><meta name="theme-color" content="#234c44">
-<link rel="icon" href="/assets/favicon.svg" type="image/svg+xml"><link rel="stylesheet" href="/assets/style.css">
-<link rel="canonical" href="https://monsoonisle.github.io/en/games/the-arrow/privacy/"><link rel="alternate" hreflang="en" href="https://monsoonisle.github.io/en/games/the-arrow/privacy/"><link rel="alternate" hreflang="zh-Hans" href="https://monsoonisle.github.io/zh/games/the-arrow/privacy/"><link rel="alternate" hreflang="x-default" href="https://monsoonisle.github.io/en/games/the-arrow/privacy/"></head>
-<body><header><a class="brand" href="/en/"><img src="/assets/favicon.svg" alt="">Monsoon Isle</a>
-<nav aria-label="Main navigation"><a href="/en/#games">Games</a><a href="/en/#about">About</a><a class="language-toggle" href="/zh/games/the-arrow/privacy/" lang="zh-CN" hreflang="zh-CN" aria-label="Switch to Chinese">中文</a></nav></header><main><div class="legal-hero"><span class="eyebrow">THE ARROW · LEGAL</span><h1>Privacy Policy</h1><p class="small">Last updated: September 17, 2026 · Developer: Monsoon Isle</p></div><div class="legal-layout"><aside class="toc" aria-label="Contents"><a href="#scope">1. About this policy</a><a href="#local">2. Information on your device</a><a href="#analytics">3. Gameplay analytics</a><a href="#ads">4. Advertising</a><a href="#sharing">5. Sharing and service providers</a><a href="#retention">6. Retention, security and deletion</a><a href="#choices">7. Your choices and children’s privacy</a><a href="#changes">8. Updates and contact</a></aside><article class="policy"><section id="scope"><h2>1. About this policy</h2><p>This Privacy Policy explains how Monsoon Isle (the developer of The Arrow, Android package com.monsoonisle.thearrow) handles information when you play The Arrow. The game does not require a player account.</p></section>
-<section id="local"><h2>2. Information on your device</h2><p>The game stores settings, level progress, achievements, daily rewards, saved games and gameplay diagnostics on your device. A local analytics queue also stores gameplay events and randomly generated installation, session and event identifiers. These records support game features and analytics delivery.</p></section>
-<section id="analytics"><h2>3. Gameplay analytics</h2><p>The Arrow integrates Google Analytics for Firebase to understand game use and improve gameplay and reliability. When analytics is enabled in the distributed build, gameplay and advertising events are sent to Google, including session duration, level starts and results, progress, hints, rewards, ad impressions and clicks, loading times and technical errors. Event data includes random installation and session identifiers, timestamps, game version, device model, operating system and language. Google’s SDK may also process app-instance identifiers and approximate geographic information. Our current Firebase configuration disables advertising-ID collection and ad-personalization signals for Analytics; this does not disable AdMob’s separate data processing.</p></section>
-<section id="ads"><h2>4. Advertising</h2><p>The Arrow uses Google AdMob for rewarded and interstitial ads. Google’s Mobile Ads SDK automatically collects and shares IP addresses (which can indicate approximate location), device or account identifiers such as advertising ID and app set ID, interactions with the app and ads, and diagnostic information such as performance and crash data. Google uses this information for advertising, analytics and fraud prevention. Ad personalization depends on applicable consent, SDK configuration and device settings. The game does not request precise device location, contacts, camera or microphone access.</p></section>
-<section id="sharing"><h2>5. Sharing and service providers</h2><p>Analytics and advertising information is processed by Google through Firebase Analytics and AdMob. We use analytics reports to improve the game. We do not sell your local saved-game data. If you contact us, we receive the information you choose to include, such as your email address and message, and use it to respond. Service providers may process data outside your country under their applicable terms and safeguards. Your app store and operating system process information separately under their own policies.</p></section>
-<section id="retention"><h2>6. Retention, security and deletion</h2><p>Local saves remain until overwritten or removed. Clear the app’s storage in Android Settings or uninstall the app to remove local data; this resets progress. Removing local data does not automatically delete information previously received by Google. Google-hosted analytics is retained according to the Analytics property’s configured retention settings; advertising data is retained under Google’s policies. We retain support correspondence only as needed to resolve your request and meet applicable legal obligations. Contact us to request access or deletion where applicable; we may need information to locate records, and cannot identify all SDK records from a player name because the game has no account system. Google’s SDKs encrypt data in transit. No storage or transmission method is completely secure.</p></section>
-<section id="choices"><h2>7. Your choices and children’s privacy</h2><p>You can manage advertising privacy controls in Android and Google settings, where available, and remove local game data as described above. The current game has no in-game analytics opt-out switch. Applicable privacy rights are not limited by this policy. We do not ask children to provide their name or contact details within the game. Advertising and analytics SDKs may still process the technical data described above. Parents or guardians with privacy concerns can contact us.</p></section>
-<section id="changes"><h2>8. Updates and contact</h2><p>We will update this page and its date if our data practices change. Where required, material changes will be communicated and consent obtained before the relevant processing. For privacy questions or requests, use the contact information below.</p></section><p>Privacy contact: <a href="mailto:aquark314@gmail.com">aquark314@gmail.com</a></p><h2>Provider privacy information</h2><ul><li><a href="https://policies.google.com/privacy">Google Privacy Policy</a></li><li><a href="https://firebase.google.com/support/privacy">Privacy and Security in Firebase</a></li><li><a href="https://developers.google.com/admob/android/privacy/play-data-disclosure">Google Mobile Ads SDK data disclosure</a></li><li><a href="https://support.google.com/analytics/answer/7667196">Google Analytics data retention</a></li></ul></article></div></main><footer><span>© 2026 Monsoon Isle</span><a href="/en/games/the-arrow/privacy/">The Arrow · Privacy Policy</a></footer></body></html>
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <title>The Arrow — Privacy Policy | Monsoon Isle</title>
+  <meta name="description" content="How The Arrow handles local saves, analytics, advertising and support information, including privacy choices and data deletion.">
+  <meta name="theme-color" content="#234c44">
+  <link rel="icon" href="/assets/favicon.svg" type="image/svg+xml">
+  <link rel="stylesheet" href="/assets/style.css">
+  <link rel="canonical" href="https://monsoonisle.github.io/en/games/the-arrow/privacy/">
+  <link rel="alternate" hreflang="en" href="https://monsoonisle.github.io/en/games/the-arrow/privacy/">
+  <link rel="alternate" hreflang="zh-Hans" href="https://monsoonisle.github.io/zh/games/the-arrow/privacy/">
+  <link rel="alternate" hreflang="x-default" href="https://monsoonisle.github.io/en/games/the-arrow/privacy/">
+</head>
+<body>
+  <header>
+    <a class="brand" href="/en/"><img src="/assets/favicon.svg" alt="">Monsoon Isle</a>
+    <nav aria-label="Main navigation">
+      <a href="/en/#games">Games</a>
+      <a href="/en/#about">About</a>
+      <a class="language-toggle" href="/zh/games/the-arrow/privacy/" lang="zh-CN" hreflang="zh-CN" aria-label="Switch to Chinese">中文</a>
+    </nav>
+  </header>
+  <main>
+    <div class="legal-hero">
+      <span class="eyebrow">THE ARROW · LEGAL</span>
+      <h1>Privacy Policy</h1>
+      <p class="small">Last updated: <time datetime="2026-09-17">September 17, 2026</time> · Developer: Monsoon Isle</p>
+      <p class="legal-intro">This policy explains what information we handle, why, and how you can manage it or request its deletion.</p>
+    </div>
+    <div class="legal-layout">
+      <aside class="toc" aria-label="Privacy policy contents">
+        <a href="#scope">1. Scope and responsibility</a>
+        <a href="#local">2. Local and provided information</a>
+        <a href="#analytics">3. Gameplay analytics</a>
+        <a href="#ads">4. Advertising</a>
+        <a href="#purposes">5. Purposes and legal bases</a>
+        <a href="#sharing">6. Sharing and international processing</a>
+        <a href="#retention">7. Retention and deletion</a>
+        <a href="#choices">8. Your choices and privacy rights</a>
+        <a href="#children">9. Children and younger users</a>
+        <a href="#security">10. Information security</a>
+        <a href="#website">11. Website visits and external links</a>
+        <a href="#changes">12. Policy updates and contact</a>
+      </aside>
+      <article class="policy">
+        <div class="policy-summary" aria-labelledby="summary-title">
+          <h2 id="summary-title">At a glance</h2>
+          <ul>
+<li>The Arrow is intended for users aged 13 and over and needs no player account. Progress and settings are saved on your device.</li>
+<li>The game uses Firebase Analytics and AdMob. Related technical information and gameplay events may be sent to Google.</li>
+<li>Clearing local data resets progress but does not automatically delete information already received by Google.</li>
+<li>For privacy questions or requests, email <a href="mailto:aquark314@gmail.com">aquark314@gmail.com</a>.</li>
+          </ul>
+          <p>The sections below explain the specific information, purposes and handling practices.</p>
+        </div>
+
+        <section id="scope">
+          <h2>1. Scope and responsibility</h2>
+          <p>Monsoon Isle ("we", "us" or "our") develops The Arrow and is responsible for the processing described here for which we determine the purposes and means. This policy covers The Arrow for Android (package: <span class="package-name">com.monsoonisle.thearrow</span>), related support communications, and the Monsoon Isle website described in section 11.</p>
+          <p>Personal information includes information that identifies you directly or together with other information. Device identifiers, installation identifiers and IP addresses may qualify even without your real name.</p>
+        </section>
+        <section id="local">
+          <h2>2. Local and provided information</h2>
+          <h3>Game records on your device</h3>
+          <p>The game saves settings, level progress, achievements, daily rewards, unfinished games and diagnostic records on your device to restore game state and run these features. Local analytics records also contain gameplay events and randomly generated installation, session and event identifiers.</p>
+          <p>Local storage does not mean all related information stays on your device. Some progress, gameplay and advertising events are sent through the analytics service in section 3. This differs from uploading complete saved games or providing cloud saves.</p>
+          <h3>Information you provide</h3>
+          <p>When you email us, we receive your email address, message and any attachments you choose to send. We use them to respond, troubleshoot and handle your request. Please provide only necessary information and avoid sending passwords, payment details or unnecessary sensitive information.</p>
+          <p>The game needs no player account and does not ask for your name or contact details. It currently does not request access to precise device location, contacts, the camera or the microphone.</p>
+        </section>
+        <section id="analytics">
+          <h2>3. Gameplay analytics</h2>
+          <p>The Arrow uses Google Analytics for Firebase to understand game use, improve gameplay and investigate problems. Builds with analytics enabled send Google:</p>
+          <ul>
+          <li><strong>Gameplay and ad activity:</strong> launches and session duration, level starts and results, progress changes, tutorials, use of hints and rewards, ad requests, impressions and clicks.</li>
+          <li><strong>Technical information:</strong> event times, game version, device model, operating system, language, loading times and technical errors.</li>
+          <li><strong>Identifiers:</strong> randomly generated installation, session and event identifiers. Google's SDK may also process app-instance identifiers and approximate geographic information.</li>
+          </ul>
+          <p>We use the service to view and analyze analytics data. Random identifiers can link events from the same installation or session, so this information is not necessarily anonymous.</p>
+          <p>Our current Firebase configuration disables advertising-ID collection and ad-personalization signals for Analytics. These settings do not disable AdMob's separate processing.</p>
+        </section>
+        <section id="ads">
+          <h2>4. Advertising</h2>
+          <p>The Arrow uses Google AdMob for rewarded and interstitial ads. You can choose to watch rewarded ads for an in-game benefit.</p>
+          <p>To deliver and measure ads and prevent fraud, Google's Mobile Ads SDK processes IP addresses and inferred approximate location, app and ad interactions, diagnostics such as performance information, and device or account identifiers such as advertising ID and app set ID. Processing depends on SDK version, configuration, device settings and applicable consent status. App set ID serves permitted purposes such as analytics and fraud prevention, not ad personalization.</p>
+          <p>Ad personalization depends on applicable consent, advertising configuration and device settings. Non-personalized ads can still involve data for delivery, frequency control, security and measurement. Watching a rewarded ad does not itself mean consenting to unrelated tracking or personalized advertising.</p>
+          <p>See the <a href="https://policies.google.com/privacy">Google Privacy Policy</a> and <a href="https://developers.google.com/admob/android/privacy/play-data-disclosure">Google Mobile Ads SDK data disclosure</a>. Section 8 describes your available choices.</p>
+        </section>
+        <section id="purposes">
+          <h2>5. Purposes and legal bases</h2>
+          <p>We handle the information described above to run and save game features; understand gameplay and fix problems; deliver and measure ads, grant rewards and prevent abuse; respond to support and privacy requests; and meet applicable legal obligations.</p>
+          <p>Where a legal basis is required, processing necessary for game features and support you request is based on performing the relevant service agreement. Mandatory retention or disclosure is based on legal obligations. Where permitted and not overridden by your rights and interests, security, troubleshooting and service improvement may rely on corresponding legitimate interests.</p>
+          <p>Analytics, device information access or personalized advertising requiring consent must take place only after valid consent. Legitimate interests cannot replace legally required consent. You can request withdrawal under section 8. Reading this policy or continuing to play does not itself constitute consent to that processing.</p>
+        </section>
+        <section id="sharing">
+          <h2>6. Sharing and international processing</h2>
+          <ul>
+          <li><strong>Google:</strong> receives the information in sections 3 and 4 through Firebase Analytics and AdMob under the applicable service terms and privacy information.</li>
+          <li><strong>Hosting and communications providers:</strong> GitHub Pages hosts the website and email providers process support messages, each handling information needed for its functions.</li>
+          <li><strong>Legal and security needs:</strong> we may disclose information necessary to comply with applicable law, respond to lawful requests or protect users and services, limiting disclosure to what is reasonably necessary.</li>
+          <li><strong>Your instructions or consent:</strong> we provide additional notice and obtain consent where required before sharing personal information for other purposes.</li>
+          </ul>
+          <p>We do not sell local saved-game files. Advertising data transfers may qualify as a "sale", "sharing" or targeted advertising under some laws; the statement about saved-game files does not mean such activities never occur. See section 8 for relevant rights.</p>
+          <p>Providers may process information outside your country, including in the United States, where data protection rules may differ. Required transfer mechanisms and safeguards must be used under applicable law. Provider privacy notices explain their locations and protections; you can also contact us about our processing activities.</p>
+        </section>
+        <section id="retention">
+          <h2>7. Retention and deletion</h2>
+          <p>We use Google's analytics and advertising services and do not separately store raw gameplay analytics on servers we operate ourselves. Records on your device, Google-hosted data and support emails you send us remain subject to the following separate retention rules:</p>
+          <ul>
+          <li><strong>Local saves and analytics records:</strong> the game saves progress, settings and local analytics records on your device until updated, overwritten or removed. Clear The Arrow's storage in Android settings or uninstall it to remove local data; this resets progress. Migration or backup services may keep separate copies that you need to manage through them.</li>
+          <li><strong>Firebase Analytics data:</strong> Google hosts this data. Our retention policy for applicable user-level and event-level analytics data is <strong>2 months</strong>, with expired data removed through Google's scheduled deletion process. This period does not apply to standard aggregate reports, AdMob advertising data or local device records. See <a href="https://support.google.com/analytics/answer/7667196">Google Analytics data retention</a>.</li>
+          <li><strong>AdMob advertising data:</strong> Google retains this for purposes such as ad delivery, measurement and fraud prevention, under applicable policies and legal requirements. Periods can differ by data type and do not follow the Analytics retention setting. See <a href="https://policies.google.com/technologies/retention">Google's data retention information</a>.</li>
+          <li><strong>Website hosting logs:</strong> GitHub retains these under its hosting service purposes, privacy statement and applicable law.</li>
+          <li><strong>Support correspondence:</strong> we keep it only as needed to resolve issues, follow up on requests and meet legal obligations, then delete or anonymize it when no longer needed.</li>
+          </ul>
+          <p>Clearing app storage, uninstalling the game or deleting an advertising ID does not automatically erase information already sent to Google. For access to or deletion of information we can identify and control, contact us under section 8. We will explain any legal need to retain information and relevant limitations.</p>
+        </section>
+        <section id="choices">
+          <h2>8. Your choices and privacy rights</h2>
+          <h3>Device and advertising choices</h3>
+          <p>Android or Google settings offer advertising privacy options, including resetting or deleting your advertising ID. Menus vary by device and operating system. These actions do not stop all analytics or ad processing or erase data already collected.</p>
+          <p>The current game has no in-game analytics opt-out switch. To withdraw consent, object to processing or ask about restrictions, email us below. An email request does not instantly stop the SDK on your device. To immediately stop that installation generating further gameplay events, you can stop using and uninstall the game.</p>
+          <h3>Making a privacy request</h3>
+          <p>Depending on applicable law, you may have rights to know about and access your information, obtain a copy, correct or delete it, restrict or object to processing, request data portability and withdraw consent. Withdrawal does not affect lawful processing based on prior consent. Some jurisdictions also provide rights to opt out of targeted advertising or the "sale" or "sharing" of information, appeal decisions and complain to a competent supervisory authority.</p>
+          <p>Users in the EEA, the UK and Switzerland can exercise applicable data protection rights described above and complain to a competent local data protection authority. US residents can request to opt out of the "sale" or "sharing" of personal information or targeted advertising where applicable state law provides these rights. Users in Southeast Asia and other regions can make requests under their applicable local laws; this policy does not limit those rights.</p>
+          <p>Email <a href="mailto:aquark314@gmail.com?subject=The%20Arrow%20Privacy%20Request">aquark314@gmail.com</a> with the subject "The Arrow Privacy Request", the action you want, and helpful context such as your game version and approximate usage dates. We request additional information only as needed to verify the request, protect data or locate records. Please do not send identity documents or passwords unsolicited.</p>
+          <p>Without player accounts, a name or email usually cannot identify every installation or SDK record. If we cannot locate data or a provider independently controls it, we explain the limitation and provide relevant request channels where possible. We handle requests within applicable legal deadlines and explain extensions or refusals and available next steps. We will not treat you unfairly for lawfully exercising privacy rights.</p>
+        </section>
+        <section id="children">
+          <h2>9. Children and younger users</h2>
+          <p>The Arrow is intended for <strong>users aged 13 and over</strong> and is not directed to children under 13. Store content ratings (such as "3+") describe content suitability and are separate from the game's intended audience and privacy consent requirements.</p>
+          <p>Users aged 13 and over may still be minors protected by local law. Higher age thresholds or other requirements for data processing, parental consent or personalized advertising continue to apply where required. Reaching age 13 or meeting a store content rating does not replace required consent. Parents and guardians should consider this policy when managing a minor's use.</p>
+          <p>The game includes third-party ads and analytics that may process the technical information in sections 3 and 4. We do not ask for names or contact details in the game, but this does not mean that no personal information about minors is processed.</p>
+          <p>If you believe information about a child under 13 has been collected through the game, or a minor's information has been processed without legally required consent or protections, contact <a href="mailto:aquark314@gmail.com">aquark314@gmail.com</a>. Once verified, we will delete relevant information we can identify and control, restrict the related processing and help direct requests to service providers where needed.</p>
+        </section>
+        <section id="security">
+          <h2>10. Information security</h2>
+          <p>We take reasonable safeguards appropriate to the information and processing risks. Google's relevant SDKs use encrypted connections. Local records also depend on device and operating system access protections. No storage or transmission method guarantees absolute security.</p>
+          <p>Please protect your device and send only necessary support information through our designated contact channel. We will meet applicable notification requirements if a security incident requires notice.</p>
+        </section>
+        <section id="website">
+          <h2>11. Website visits and external links</h2>
+          <p>The Monsoon Isle website (<a href="https://monsoonisle.github.io/">monsoonisle.github.io</a>) introduces games, publishes this policy and provides contact details. Our pages currently include no advertising or visitor analytics scripts, set no tracking cookies, and do not use browser local storage to remember language. The URL determines the language.</p>
+          <p>GitHub Pages hosts the site. GitHub logs visitors' IP addresses for security under its <a href="https://docs.github.com/en/site-policy/privacy-policies/github-general-privacy-statement">Privacy Statement</a>. Having no analytics scripts of our own does not mean the host processes no visit records.</p>
+          <p>External websites, app stores and services handle information under their own policies. This policy describes our practices and does not replace third-party notices.</p>
+        </section>
+        <section id="changes">
+          <h2>12. Policy updates and contact</h2>
+          <p>We may update this policy as features, providers or legal requirements change and revise the date above. Material changes will be communicated through the game or another appropriate channel as required. New consent, where needed, will be obtained before the relevant processing. Policy updates do not replace required consent.</p>
+          <p>Developer and privacy contact: <strong>Monsoon Isle</strong><br>Privacy and game support: <a href="mailto:aquark314@gmail.com">aquark314@gmail.com</a></p>
+          <h3>Further information from our providers</h3>
+          <ul>
+          <li><a href="https://policies.google.com/privacy">Google Privacy Policy</a></li>
+          <li><a href="https://firebase.google.com/support/privacy">Privacy and Security in Firebase</a></li>
+          <li><a href="https://developers.google.com/admob/android/privacy/play-data-disclosure">Google Mobile Ads SDK data disclosure</a></li>
+          <li><a href="https://support.google.com/analytics/answer/7667196">Google Analytics data retention</a></li>
+          <li><a href="https://docs.github.com/en/site-policy/privacy-policies/github-general-privacy-statement">GitHub Privacy Statement</a></li>
+          </ul>
+        </section>
+      </article>
+    </div>
+  </main>
+  <footer><span>© 2026 Monsoon Isle</span><a href="/en/games/the-arrow/privacy/">The Arrow · Privacy Policy</a></footer>
+</body>
+</html>
