@@ -1,11 +1,9 @@
 # Monsoon Isle website
 
-Static HTML/CSS site for GitHub Pages. No build step, external fonts or site analytics. English and Chinese are independent static pages under /en/ and /zh/. The root redirects to /en/. Language links open the equivalent page, and the URL always determines the language. No JavaScript or browser storage is required.
+Static HTML/CSS site for GitHub Pages. No build step, external fonts or site analytics. The site is English-only for an international audience. The homepage and game privacy policies live under /en/ to preserve existing public links. The root redirects to /en/. No JavaScript or browser storage is required.
 
 - English home: https://monsoonisle.github.io/en/
-- Chinese home: https://monsoonisle.github.io/zh/
 - English privacy policy (Google Play): https://monsoonisle.github.io/en/games/the-arrow/privacy/
-- Chinese privacy policy: https://monsoonisle.github.io/zh/games/the-arrow/privacy/
 
 ## Preview
 
@@ -25,12 +23,12 @@ Commit and push to the branch configured in Settings → Pages.
 
 ## Privacy policy maintenance
 
-The English and Chinese policies cover The Arrow, support correspondence, and this GitHub Pages website. Keep their numbered sections, data practices, dates, and links synchronized. The policy distinguishes local saves from analytics events, explains SDK data handling and deletion limits, and provides a privacy request contact. It does not claim an in-game consent screen or analytics switch is implemented.
+The English privacy policy covers The Arrow, support correspondence, and this GitHub Pages website. Keep its data practices, dates, and links up to date. The policy distinguishes local saves from analytics events, explains SDK data handling and deletion limits, and provides a privacy request contact. It does not claim an in-game consent screen or analytics switch is implemented.
 
 Confirmed product decisions:
 
 - Target audience: users aged 13 and over; the game is not directed to children under 13. The store's 3+ content rating is separate from this target audience. Ages 13–17 may still require additional protections under local law and Google Play policies.
-- Planned release regions: Southeast Asia and Europe/Americas (东南亚和欧美). The public policy does not need a country-by-country availability list; exact store distribution settings determine which regional requirements must be implemented.
+- Planned release regions: Southeast Asia and Europe/Americas. The public policy does not need a country-by-country availability list; exact store distribution settings determine which regional requirements must be implemented.
 - Retention policy: 2 months for applicable Firebase/Google Analytics user-level and event-level data. This is a policy decision, not confirmation of a console change. It does not set a 2-month limit for aggregate reports, AdMob data, local records or support messages.
 
 Before publishing the policy with a game release, complete these implementation checks:
@@ -47,4 +45,4 @@ Editorial references (reviewed September 17, 2026): [Easybrain](https://easybrai
 
 ## Add another game
 
-Add matching pages under en/games/<game-slug>/privacy/ and zh/games/<game-slug>/privacy/. Add a game card to each language homepage, matching language links, canonical and hreflang links, and update sitemap.xml.
+Add an English policy under en/games/<game-slug>/privacy/. Add a game card to en/index.html, set the canonical URL for the new policy, and update sitemap.xml.
