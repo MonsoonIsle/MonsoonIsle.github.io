@@ -1,6 +1,6 @@
 # Monsoon Isle website
 
-Static HTML/CSS site for GitHub Pages. No build step, external fonts, JavaScript or site analytics.
+Static HTML/CSS site for GitHub Pages. No build step, external fonts or site analytics. The homepage defaults to English; a small local script switches to Chinese and stores the preference in the browser.
 
 - Home: https://monsoonisle.github.io/
 - The Arrow privacy policy: https://monsoonisle.github.io/games/the-arrow/privacy/
