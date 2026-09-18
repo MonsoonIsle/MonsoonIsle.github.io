@@ -6,3 +6,6 @@
 .legal-intro{max-width:660px;color:#53665c}.policy{min-width:0;overflow-wrap:break-word}.policy h3{font-size:18px;letter-spacing:0;margin:24px 0 10px;font-weight:600}.policy section+section,.policy-summary+section{margin-top:36px;padding-top:28px;border-top:1px solid #dce1d6}.policy li+li{margin-top:10px}.policy ul{padding-left:24px}.policy-summary{padding:24px 26px;background:#eeeee4;border:1px solid #dce1d6;border-radius:10px}.policy-summary h2{font-size:22px}.policy-summary p:last-child{margin-bottom:0;font-size:13px}.package-name{overflow-wrap:anywhere}@media(min-width:761px){.toc{max-height:calc(100vh - 48px);overflow-y:auto;padding:4px 8px}}@media(max-width:440px){.policy-summary{padding:20px}.policy h2{font-size:21px}}
 
 nav{align-items:center}@media(max-width:440px){nav{gap:10px}}
+
+/* Use the approved square brand icon as the homepage's primary visual. */
+.island svg{display:none}.island::before{content:"";display:block;width:min(100%,370px);aspect-ratio:1;background:url("/assets/monsoon-isle-icon.png?v=20260918-2") center/contain no-repeat}@media(max-width:760px){.island::before{width:min(100%,280px)}}
