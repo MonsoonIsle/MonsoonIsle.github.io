@@ -5,6 +5,40 @@ Static HTML/CSS site for GitHub Pages. No build step, external fonts or site ana
 - English home: https://monsoonisle.github.io/en/
 - English privacy policy (Google Play): https://monsoonisle.github.io/en/games/the-arrow/privacy/
 
+## The Cube privacy draft
+
+The new `en/games/the-cube/privacy/index.html` page is a **review draft**, prepared
+from The Cube's implemented Android integration and local policy draft on
+September 29, 2026. It has no effective date, is marked `noindex,nofollow`, and is
+not included in `sitemap.xml` while pending. The homepage card explicitly links
+to a draft. Its cover is the game's existing approved app icon, copied unchanged.
+
+Do not use this draft URL as a final Google Play policy until these facts are
+resolved and the public page is published:
+
+- Confirm The Cube's actual target age groups. The earlier 13+ recommendation
+  was provisional, not a confirmed product restriction or store content rating.
+- Verify the Firebase/Google Analytics retention duration and
+  reset-on-new-activity setting for project `the-cube-63905`. The Arrow's
+  2-month decision below does not apply automatically to The Cube.
+- Confirm production advertising, gameplay events, release-region consent and
+  age handling. Currently Analytics is optional and off by default, normal play
+  has no ad requests, and only debug diagnostics can show official sample ads.
+- Replace the review notes with verified release facts; set the effective date;
+  remove the draft labels and robots restriction; add the canonical policy URL
+  to `sitemap.xml`; link it in the game and Play Console.
+
+Draft validation (September 29, 2026): all 69 local links/assets across the five
+HTML pages resolve; section IDs/canonical/robots metadata and sitemap XML pass.
+Local HTTP checks return 200 for the homepage, both game policies, stylesheet and
+The Cube image. Chrome checks at 390 px and 1280 px show no horizontal overflow
+on the checked layouts; the new image matches the game icon byte for byte.
+
+Local preview: http://localhost:8080/en/games/the-cube/privacy/.
+The intended published URL is
+https://monsoonisle.github.io/en/games/the-cube/privacy/; the branch itself does
+not establish that this URL is live.
+
 ## Preview
 
 Run `python -m http.server 8080` from this directory and visit http://localhost:8080/.
@@ -14,6 +48,8 @@ Run `python -m http.server 8080` from this directory and visit http://localhost:
 Commit and push to the branch configured in Settings → Pages.
 
 ## Release checklist
+
+The following existing checklist and confirmed decisions apply to **The Arrow**.
 
 - Confirmed developer name: Monsoon Isle. Public privacy and support contact: aquark314@gmail.com.
 - Apply and verify the agreed 2-month Analytics retention policy in the console; align the store target audience with ages 13 and over and verify the final distributed SDK configuration.
