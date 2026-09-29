@@ -7,37 +7,87 @@ Static HTML/CSS site for GitHub Pages. No build step, external fonts or site ana
 
 ## The Cube privacy draft
 
-The new `en/games/the-cube/privacy/index.html` page is a **review draft**, prepared
-from The Cube's implemented Android integration and local policy draft on
-September 29, 2026. It has no effective date, is marked `noindex,nofollow`, and is
-not included in `sitemap.xml` while pending. The homepage card explicitly links
-to a draft. Its cover is the game's existing approved app icon, copied unchanged.
+`en/games/the-cube/privacy/index.html` is the September 30, 2026 review draft for
+The Cube's next Android release. It has no effective date, is marked
+`noindex,nofollow`, and is excluded from `sitemap.xml`. Its homepage card links to
+a draft. This section supersedes the September 29 development-only snapshot;
+normal gameplay now has defined interstitial and optional rewarded-revive
+placements. The Cube uses no banners.
 
-Do not use this draft URL as a final Google Play policy until these facts are
-resolved and the public page is published:
+The policy describes separate, default-off usage statistics and Crashlytics
+(Java/NDK) sharing, the limited gameplay-event fields, withdrawal controls,
+AdMob/UMP, local saves, provider processing and deletion limits. It does not
+claim that Java/NDK reporting captures every GDScript error or that Firebase
+console delivery, release configuration or legal compliance has been verified.
 
-- Confirm The Cube's actual target age groups. The earlier 13+ recommendation
-  was provisional, not a confirmed product restriction or store content rating.
-- Verify the Firebase/Google Analytics retention duration and
-  reset-on-new-activity setting for project `the-cube-63905`. The Arrow's
-  2-month decision below does not apply automatically to The Cube.
-- Confirm production advertising, gameplay events, release-region consent and
-  age handling. Currently Analytics is optional and off by default, normal play
-  has no ad requests, and only debug diagnostics can show official sample ads.
-- Replace the review notes with verified release facts; set the effective date;
-  remove the draft labels and robots restriction; add the canonical policy URL
-  to `sitemap.xml`; link it in the game and Play Console.
+Before treating this as the effective policy:
 
-Draft validation (September 29, 2026): all 69 local links/assets across the five
-HTML pages resolve; section IDs/canonical/robots metadata and sitemap XML pass.
-Local HTTP checks return 200 for the homepage, both game policies, stylesheet and
-The Cube image. Chrome checks at 390 px and 1280 px show no horizontal overflow
-on the checked layouts; the new image matches the game icon byte for byte.
+- Confirm The Cube's actual target age groups and regional age/consent handling.
+  No age restriction or store rating has been inferred from another product.
+- Verify and record the Analytics retention duration and reset-on-new-activity
+  setting for project `the-cube-63905`. No duration is assumed. Google's
+  documented Crashlytics retention is a separate provider practice.
+- Match the distributed build to the event definitions and separate privacy
+  switches; verify off-by-default behavior, withdrawal/restart behavior and
+  controlled Analytics/Crashlytics delivery in the project's console.
+- Verify production interstitial and rewarded ad-unit formats and UMP messages.
+  Endless shows at most one interstitial at ordinary game-over, with a 60-second
+  skip after rewarded revival; challenges count three first-time completions,
+  excluding replays; either mode allows at most two rewarded revives per attempt.
+- Replace review notes with verified facts and set an effective date before
+  removing draft labels/robots restrictions and adding the canonical URL to the
+  sitemap. Keep the game's policy link and Play Data safety declaration aligned.
+  A push to a branch does not itself establish that GitHub Pages published it.
 
-Local preview: http://localhost:8080/en/games/the-cube/privacy/.
-The intended published URL is
-https://monsoonisle.github.io/en/games/the-cube/privacy/; the branch itself does
-not establish that this URL is live.
+The intended policy URL is
+https://monsoonisle.github.io/en/games/the-cube/privacy/.
+For a local preview, run the server below and open
+http://localhost:8080/en/games/the-cube/privacy/.
+
+### The Cube app-ads.txt
+
+The root `app-ads.txt` adds this authorized direct-seller entry for the supplied
+AdMob publisher account; it is not an app ID or an ad-unit ID:
+
+```text
+google.com, pub-8551268736492401, DIRECT, f08c47fec0942fa0
+```
+
+Format and root placement follow [AdMob's setup instructions](https://support.google.com/admob/answer/9363762?hl=en)
+and [Google's seller-entry example](https://support.google.com/admanager/answer/9422161?hl=en).
+Do not replace or remove other publishers' existing lines during future updates.
+After publishing, check https://monsoonisle.github.io/app-ads.txt and the store's
+developer-website domain, then verify crawl status in AdMob. A valid local file
+does not establish public availability, AdMob verification or ad serving.
+
+### The Cube verification
+
+Check policy section links, duplicate IDs, canonical/robots metadata, local
+assets and the homepage's Cube link. Serve the repository and check the policy,
+homepage, stylesheet and `/app-ads.txt` return HTTP 200. In a browser, check the
+policy at 320, 390, 768 and 1280 CSS pixels for horizontal overflow, readable
+headings, visible focus and working section navigation. Review `git diff` to
+ensure other products and shared styles are untouched.
+
+Validation on September 30, 2026: `git diff --check` passed; a Python HTML parser
+resolved all 22 local policy links/assets and checked 14 unique IDs, canonical,
+draft robots metadata and the homepage's Cube link. Local HTTP checks returned
+200 for the homepage, Cube policy, stylesheet, Cube image and plain-text
+`app-ads.txt`. Headless Chrome via the existing Playwright installation passed
+all four widths, section navigation and visible keyboard focus, with no page
+errors. The 390 px and 1280 px screenshots were visually reviewed. The homepage
+and README text outside this Cube section were verified byte-identical to HEAD.
+These are local checks; public availability and provider-console verification
+remain separate release checks.
+
+Official disclosure references, reviewed September 30, 2026:
+[Mobile Ads data](https://developers.google.com/admob/android/privacy/play-data-disclosure),
+[UMP controls](https://developers.google.com/admob/android/privacy),
+[Firebase privacy and Crashlytics retention](https://firebase.google.com/support/privacy),
+[Crashlytics collection controls](https://firebase.google.com/docs/reference/android/com/google/firebase/crashlytics/FirebaseCrashlytics),
+and [Analytics retention settings](https://support.google.com/analytics/answer/7667196).
+These documents do not verify The Cube's console settings or replace validation
+against the SDK versions and features in the final build.
 
 ## Preview
 

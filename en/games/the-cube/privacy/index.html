@@ -4,7 +4,7 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width,initial-scale=1">
   <title>The Cube: Chain Reaction — Privacy Policy Draft | Monsoon Isle</title>
-  <meta name="description" content="Review draft of The Cube's privacy policy: local progress, optional Firebase Analytics, demonstration ads and privacy choices.">
+  <meta name="description" content="Review draft of The Cube's privacy policy: local progress, optional analytics and crash diagnostics, gameplay ads and privacy choices.">
   <meta name="robots" content="noindex,nofollow">
   <meta name="theme-color" content="#234c44">
   <link rel="icon" href="/assets/monsoon-isle-icon.png?v=20260918-2" type="image/png">
@@ -21,39 +21,40 @@
     <div class="legal-hero">
       <span class="eyebrow">THE CUBE: CHAIN REACTION · LEGAL</span>
       <h1>Privacy Policy Draft</h1>
-      <p class="small">Draft reviewed: <time datetime="2026-09-29">September 29, 2026</time> · Developer: Monsoon Isle</p>
-      <p class="legal-intro">How The Cube handles local game progress, optional usage statistics and privacy choices.</p>
-      <div class="note" role="note"><strong>Review draft — not an effective release policy.</strong> This page describes the current development build. The intended audience, Analytics retention settings and production advertising must be confirmed before publication. No effective date has been assigned.</div>
+      <p class="small">Draft reviewed: <time datetime="2026-09-30">September 30, 2026</time> · Developer: Monsoon Isle</p>
+      <p class="legal-intro">How The Cube handles local progress, optional statistics and crash diagnostics, and advertising.</p>
+      <div class="note" role="note"><strong>Review draft — not an effective release policy.</strong> This page describes the features being prepared for the next Android release. The intended audience, Analytics retention settings and final SDK behavior still require release verification. No effective date has been assigned.</div>
     </div>
     <div class="legal-layout">
       <aside class="toc" aria-label="Privacy policy contents">
         <a href="#scope">1. Scope and contact</a>
         <a href="#local">2. Local data and support</a>
         <a href="#analytics">3. Optional usage analytics</a>
-        <a href="#ads">4. Advertising</a>
-        <a href="#purposes">5. Purposes and consent</a>
-        <a href="#sharing">6. Service providers</a>
-        <a href="#retention">7. Retention and deletion</a>
-        <a href="#choices">8. Your choices and rights</a>
-        <a href="#audience">9. Intended audience</a>
-        <a href="#security">10. Security</a>
-        <a href="#website">11. Website and external links</a>
-        <a href="#changes">12. Policy updates</a>
+        <a href="#diagnostics">4. Optional crash diagnostics</a>
+        <a href="#ads">5. Advertising</a>
+        <a href="#purposes">6. Purposes and consent</a>
+        <a href="#sharing">7. Service providers</a>
+        <a href="#retention">8. Retention and deletion</a>
+        <a href="#choices">9. Your choices and rights</a>
+        <a href="#audience">10. Intended audience</a>
+        <a href="#security">11. Security</a>
+        <a href="#website">12. Website and external links</a>
+        <a href="#changes">13. Policy updates</a>
       </aside>
       <article class="policy">
         <div class="policy-summary" aria-labelledby="summary-title">
           <h2 id="summary-title">At a glance</h2>
           <ul>
             <li>The Cube can be played offline without an account. Progress and game settings are saved on your device.</li>
-            <li>Usage statistics are optional and off by default. You can change this choice in the game's settings.</li>
-            <li>Normal gameplay currently does not request or display ads. Development builds have a separate demonstration-ad test screen.</li>
-            <li>Turning statistics off stops future Analytics collection and resets local Analytics data; it does not erase reports already received by Google.</li>
+            <li>Usage statistics and crash-report sharing are separate, optional choices, both off by default.</li>
+            <li>The game uses interstitial ads at specified game boundaries and optional rewarded ads for revives. It does not use banner ads.</li>
+            <li>You can change privacy choices in settings. Turning a service off does not erase information already received by Google.</li>
             <li>For privacy questions, email <a href="mailto:aquark314@gmail.com">aquark314@gmail.com</a>.</li>
           </ul>
         </div>
         <section id="scope">
           <h2>1. Scope and contact</h2>
-          <p>Monsoon Isle ("we", "us" or "our") develops The Cube: Chain Reaction. This draft covers the current Android development build (package: <span class="package-name">com.tesselox.game</span>), related support correspondence and visits to this website. It does not replace the separate policy for The Arrow.</p>
+          <p>Monsoon Isle ("we", "us" or "our") develops The Cube: Chain Reaction. This draft covers the next Android release (package: <span class="package-name">com.tesselox.game</span>), related support correspondence and visits to this website. Other games have their own policies.</p>
           <p>Device identifiers, app-instance identifiers and IP addresses may be personal information even when a service does not ask for your name.</p>
           <p>Developer and privacy contact: <strong>Monsoon Isle</strong>, <a href="mailto:aquark314@gmail.com">aquark314@gmail.com</a>.</p>
         </section>
@@ -64,59 +65,73 @@
         </section>
         <section id="analytics">
           <h2>3. Optional usage analytics</h2>
-          <p>The Android app includes Google Analytics for Firebase. Collection is off by default. If you enable <strong>Share usage statistics</strong>, Google's SDK can process app usage, app-instance identifiers, device and app information, and related technical information described in <a href="https://firebase.google.com/support/privacy">Firebase's privacy documentation</a>. This information helps us understand use and investigate problems.</p>
+          <p>The Android app includes Google Analytics for Firebase. Collection is off by default. If you enable <strong>Share usage statistics</strong>, Google's SDK can process app usage, app-instance identifiers, device and app information, and related technical information described in <a href="https://firebase.google.com/support/privacy">Firebase's privacy documentation</a>. We use this information to understand game use, difficulty, revives and ad reliability.</p>
           <p>The current integration does not supply your name, email address, saved-game file or a custom user ID to Analytics. It disables Analytics advertising-ID collection and automatic screen reporting. Analytics advertising storage, advertising user data and ad-personalization consent remain denied independently of the statistics switch.</p>
-          <p>The development diagnostics screen can explicitly send an event named <span class="package-name">sdk_smoke_test</span>, without custom parameters, after statistics have been enabled. Production gameplay-event definitions remain to be confirmed.</p>
+          <p>Gameplay events cover starts and ends (<span class="package-name">game_start</span>, <span class="package-name">game_end</span>), challenge completions (<span class="package-name">level_complete</span>), revives (<span class="package-name">revive_used</span>) and ad requests and outcomes (<span class="package-name">game_ad_request</span>, <span class="package-name">game_ad_impression</span>, <span class="package-name">game_ad_reward</span>, <span class="package-name">game_ad_failure</span>). Depending on the event, they include the app version, game mode, level and a randomly generated game-attempt identifier, plus the relevant outcome or ad format. The attempt identifier relates events within a game attempt; it is not an account or a developer-assigned persistent user ID. Google may also collect its documented automatic Analytics events.</p>
+          <p>A development-only diagnostics action can send a parameter-free <span class="package-name">sdk_smoke_test</span> event after statistics have been enabled.</p>
           <p>Turning statistics off stops future collection and resets Analytics data on the device. That action does not automatically remove reports or records Google has already received.</p>
         </section>
+        <section id="diagnostics">
+          <h2>4. Optional crash diagnostics</h2>
+          <p>The Android app includes Firebase Crashlytics for Java and native (NDK) crash diagnostics. <strong>Share crash reports</strong> is a separate choice and is off by default. It helps us investigate crashes and stability problems; it does not automatically capture every game-script error.</p>
+          <p>Reports can include crash traces, app version, device and operating-system information, installation/session identifiers and native crash data. If usage statistics are also enabled, Analytics events may appear as diagnostic breadcrumbs. We do not intentionally attach saved games, names, email addresses or a custom user ID.</p>
+          <p>The SDK can keep reports locally while sharing is disabled. Turning sharing off disables automatic uploads for the next app launch and requests deletion of unsent reports. Restart the app to fully apply this change. An upload already in progress or information already received by Google cannot be recalled by this switch.</p>
+          <p>See <a href="https://firebase.google.com/support/privacy#crash-stored-info">Firebase's crash-data description</a> and <a href="https://firebase.google.com/docs/reference/android/com/google/firebase/crashlytics/FirebaseCrashlytics">Crashlytics' collection controls</a>.</p>
+        </section>
         <section id="ads">
-          <h2>4. Advertising</h2>
-          <p>Normal gameplay in the current build does not request or display advertisements. Only development builds expose a separate diagnostics screen that can load Google's official demonstration interstitial ads. These are not the developer's production ad units, but they still contact Google's services.</p>
-          <p>Ad testing requires confirmation by an adult test operator for that session and an update through Google User Messaging Platform (UMP). Required privacy forms are shown before the SDK permits an ad request. A failed privacy update does not allow an ad request, including when an earlier choice was cached. Advertising privacy choices can be revisited from settings when available.</p>
-          <p>During consent and demonstration-ad requests, Google may process device and network information, identifiers, ad interactions and diagnostics, depending on the SDK, settings and consent. AdMob's processing is separate from optional Firebase Analytics; disabling Analytics does not by itself disable an explicitly requested test ad.</p>
-          <p class="note"><strong>Before release:</strong> Confirm the actual ad formats, placements, age treatment, provider data handling and regional consent controls, then update this section. The test-operator confirmation is not a player age-verification system.</p>
+          <h2>5. Advertising</h2>
+          <p>The game uses Google AdMob. Ads need a network connection and may be unavailable. There are no banner ads. The gameplay placements are:</p>
+          <ul>
+            <li><strong>Endless:</strong> At most one interstitial ad at an ordinary game-over. A final game-over within 60 seconds after a successful rewarded revive skips that interstitial.</li>
+            <li><strong>Challenges:</strong> One interstitial opportunity after every three first-time level completions. Replaying a previously completed level does not advance this count.</li>
+            <li><strong>Optional revives:</strong> In either mode, you can choose a rewarded ad for one revive, with at most two rewarded revives per game or challenge attempt. The revive is granted only when the ad reports that the reward was earned.</li>
+          </ul>
+          <p>Advertising privacy is managed through Google User Messaging Platform (UMP), with required forms before an ad request is permitted. You can revisit available advertising privacy options in settings. A failed privacy update or unavailable ad does not prevent offline gameplay.</p>
+          <p>Google's advertising SDK can process IP addresses (including to estimate general location), ad interactions, diagnostic data and device identifiers, including advertising or app-set identifiers where permitted. Google uses these for advertising, measurement and fraud prevention. See <a href="https://developers.google.com/admob/android/privacy/play-data-disclosure">Google's Mobile Ads data disclosure</a>. This processing is separate from optional Analytics and Crashlytics; their switches do not disable AdMob's own processing.</p>
+          <p class="note"><strong>Before release:</strong> Verify production ad-unit formats, final audience and age treatment, and the configured regional consent messages against the distributed build. Development test-operator confirmation is not player age verification.</p>
         </section>
         <section id="purposes">
-          <h2>5. Purposes and consent</h2>
-          <p>Local data supports gameplay and restoration of progress. Optional analytics supports understanding and improving the game. Development advertising requests validate the integration. Support information is used to answer messages and handle requests.</p>
-          <p>Consent-dependent processing requires a valid choice. Reading a policy, continuing to play or enabling statistics does not give blanket consent to unrelated advertising or tracking. Declining optional statistics does not prevent offline play.</p>
+          <h2>6. Purposes and consent</h2>
+          <p>Local data supports gameplay and restoration of progress. Optional statistics help improve the game, optional crash reports help diagnose failures, and advertising supports the game and provides chosen revive rewards. Support information is used to answer messages and handle requests.</p>
+          <p>Consent-dependent processing requires a valid choice. Reading a policy, continuing to play or enabling one optional service does not give blanket consent to other processing. Declining optional statistics or crash sharing does not prevent offline play.</p>
           <p class="note"><strong>Before release:</strong> Confirm the applicable legal bases, notices and consent requirements for the final audience and launch regions. This draft does not claim those release checks are complete.</p>
         </section>
         <section id="sharing">
-          <h2>6. Service providers</h2>
-          <p>Google receives information through the enabled Analytics service and through explicitly requested consent/ad tests. GitHub Pages hosts this website, and email providers process support correspondence. These services may process information outside your country under their applicable terms and privacy notices.</p>
+          <h2>7. Service providers</h2>
+          <p>Google receives information through enabled Analytics and Crashlytics services and through advertising and consent requests. GitHub Pages hosts this website, and email providers process support correspondence. These services may process information outside your country under their applicable terms and privacy notices.</p>
           <p>See <a href="https://policies.google.com/privacy">Google's Privacy Policy</a>, <a href="https://policies.google.com/technologies/partner-sites">Google's partner-app data explanation</a> and <a href="https://firebase.google.com/support/privacy">Firebase privacy information</a>. The final policy must describe any additional providers or processing introduced before release.</p>
         </section>
         <section id="retention">
-          <h2>7. Retention and deletion</h2>
+          <h2>8. Retention and deletion</h2>
           <p>Local game data remains until updated or removed, including by clearing the app's storage or uninstalling it, subject to Android backup and migration behavior. Clearing game storage resets progress. Turning off statistics resets local Analytics data without deleting saved-game progress.</p>
-          <p class="note"><strong>Analytics retention is awaiting console verification.</strong> The applicable duration and reset-on-new-activity setting for The Cube's Firebase/Google Analytics property must be recorded here before publication. The Arrow's retention statement is not evidence of The Cube's settings.</p>
-          <p>Analytics settings do not define retention for AdMob data, standard aggregate reports, hosting logs or support correspondence. Service-provider notices describe their separate processing. Support messages are retained as needed to resolve requests and meet applicable obligations, then deleted or anonymized when no longer needed.</p>
+          <p class="note"><strong>Analytics retention is awaiting console verification.</strong> The applicable duration and reset-on-new-activity setting for The Cube's Firebase/Google Analytics property must be recorded here before publication. No property-specific retention duration has been verified for this draft.</p>
+          <p>Google documents a 90-day retention period for Crashlytics traces, extracted native-crash data and associated identifiers before removal from live and backup systems begins. Native minidumps are temporary processing data. This is the <a href="https://firebase.google.com/support/privacy">provider's documented practice</a>, not a separately verified Analytics setting.</p>
+          <p>Analytics settings do not define retention for Crashlytics, AdMob data, standard aggregate reports, hosting logs or support correspondence. Support messages are retained as needed to resolve requests and meet applicable obligations, then deleted or anonymized when no longer needed.</p>
           <p>Deleting local data or uninstalling the game does not automatically erase data already sent to a provider. There is no game account to delete. Without accounts or custom user IDs, an email address alone may not identify a particular app installation or Analytics record.</p>
         </section>
         <section id="choices">
-          <h2>8. Your choices and privacy rights</h2>
-          <p>Open <strong>Settings → More Settings → Set</strong> to read the local privacy summary, turn optional usage statistics on or off, and update or review available advertising privacy choices. Network failures leave offline gameplay available.</p>
+          <h2>9. Your choices and privacy rights</h2>
+          <p>Open <strong>Settings → More Settings</strong> to reach the <strong>About &amp; Privacy</strong> page. Choose <strong>Privacy &amp; Data Choices</strong> to change the separate usage-statistics and crash-report choices, and update or review available advertising privacy options. Choose <strong>Privacy Policy</strong> to open this full policy, or <strong>Contact Support</strong> to compose an email to our support address. Restart after turning crash sharing off. Network failures leave offline gameplay available.</p>
           <p>Depending on applicable law, you may have rights to access, correct or delete information, restrict or object to processing, request portability, withdraw consent or complain to a supervisory authority. Contact <a href="mailto:aquark314@gmail.com?subject=The%20Cube%20Privacy%20Request">aquark314@gmail.com</a> with the subject "The Cube Privacy Request" and relevant context.</p>
           <p>We may need additional information to locate records or verify a request. We will explain limitations where we cannot identify data or a provider independently controls it. Please do not send passwords or identity documents unsolicited.</p>
         </section>
         <section id="audience">
-          <h2>9. Intended audience</h2>
+          <h2>10. Intended audience</h2>
           <p class="note"><strong>Awaiting a product decision.</strong> The intended age groups have not been finalized. The earlier 13+ proposal is not a confirmed restriction or an assigned store content rating. This draft does not claim the game is directed to, or excludes, any particular child age group.</p>
           <p>Before publication, the declared target audience, marketing, advertising and data handling must match the actual product. The store's content rating is a separate questionnaire-based assessment. Age-related protections and consent requirements must be checked for the selected release regions.</p>
           <p>Parents or guardians with privacy concerns can contact <a href="mailto:aquark314@gmail.com">aquark314@gmail.com</a>.</p>
         </section>
         <section id="security">
-          <h2>10. Security</h2>
+          <h2>11. Security</h2>
           <p>Local data relies on device and operating-system protections. Google's relevant services use encrypted network connections. No transmission or storage method guarantees absolute security. Protect your device and share only necessary information when contacting support.</p>
         </section>
         <section id="website">
-          <h2>11. Website and external links</h2>
+          <h2>12. Website and external links</h2>
           <p>This static Monsoon Isle website uses no site analytics scripts, tracking cookies or browser local storage. GitHub Pages may process visitors' IP addresses and hosting logs under the <a href="https://docs.github.com/en/site-policy/privacy-policies/github-general-privacy-statement">GitHub Privacy Statement</a>.</p>
           <p>External websites and services apply their own privacy policies. Their notices do not replace our responsibility to describe the game's actual practices.</p>
         </section>
         <section id="changes">
-          <h2>12. Policy updates</h2>
+          <h2>13. Policy updates</h2>
           <p>The final published policy will have an effective date. It will be updated when features, providers or data practices change. Material changes and any new consent will be handled as required before the relevant processing.</p>
           <p>Privacy and game support: <a href="mailto:aquark314@gmail.com">aquark314@gmail.com</a>.</p>
         </section>
