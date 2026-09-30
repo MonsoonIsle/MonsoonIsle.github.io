@@ -22,8 +22,10 @@ console delivery, release configuration or legal compliance has been verified.
 
 Before treating this as the effective policy:
 
-- Confirm The Cube's actual target age groups and regional age/consent handling.
-  No age restriction or store rating has been inferred from another product.
+- The developer confirmed a 13+ intended audience on September 30, 2026,
+  after reviewing The Arrow's published 13+ positioning. Verify the corresponding
+  Play audience selections and regional protections for minors; this is not an
+  assigned content rating or confirmation of the other game's console settings.
 - Verify and record the Analytics retention duration and reset-on-new-activity
   setting for project `the-cube-63905`. No duration is assumed. Google's
   documented Crashlytics retention is a separate provider practice.
@@ -39,7 +41,11 @@ Before treating this as the effective policy:
   sitemap. Keep the game's policy link and Play Data safety declaration aligned.
   A push to a branch does not itself establish that GitHub Pages published it.
 
-The intended policy URL is
+The Cube page is authorized for publication on the main branch while retaining
+its review-draft status until the remaining facts are verified. Public access
+does not establish an effective release policy or completion of store checks.
+
+The policy URL is
 https://monsoonisle.github.io/en/games/the-cube/privacy/.
 For a local preview, run the server below and open
 http://localhost:8080/en/games/the-cube/privacy/.
@@ -89,6 +95,8 @@ and [Analytics retention settings](https://support.google.com/analytics/answer/7
 These documents do not verify The Cube's console settings or replace validation
 against the SDK versions and features in the final build.
 
+The existing release checklist below continues to apply to The Arrow.
+
 ## Preview
 
 Run `python -m http.server 8080` from this directory and visit http://localhost:8080/.
@@ -98,8 +106,6 @@ Run `python -m http.server 8080` from this directory and visit http://localhost:
 Commit and push to the branch configured in Settings → Pages.
 
 ## Release checklist
-
-The following existing checklist and confirmed decisions apply to **The Arrow**.
 
 - Confirmed developer name: Monsoon Isle. Public privacy and support contact: aquark314@gmail.com.
 - Apply and verify the agreed 2-month Analytics retention policy in the console; align the store target audience with ages 13 and over and verify the final distributed SDK configuration.
