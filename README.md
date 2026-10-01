@@ -8,13 +8,14 @@ Static HTML/CSS site for GitHub Pages. No build step, external fonts or site ana
 ## The Cube privacy policy
 
 `en/games/the-cube/privacy/index.html` is The Cube's effective privacy policy,
-with an effective and last-updated date of **September 30, 2026**. It covers
+effective **September 30, 2026**, last updated **October 1, 2026**. It covers
 Android versions, including test versions, support correspondence and this
 website. The public policy URL is
 https://monsoonisle.github.io/en/games/the-cube/privacy/.
-Both privacy contacts are retained: **aquark314@gmail.com** and
-**mengjingchanyu@gmail.com**. The policy's effective date does not mean the game
-has launched publicly or that every feature is available in every build.
+The Cube privacy and support contact is **mengjingchanyu@gmail.com**.
+The Arrow and the general website contact remain unchanged. The policy's effective
+date does not mean the game has launched publicly or that every feature is available
+in every build.
 
 The policy reflects the following verified source and console facts:
 
