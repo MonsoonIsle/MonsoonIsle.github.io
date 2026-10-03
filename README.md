@@ -8,7 +8,7 @@ Static HTML/CSS site for GitHub Pages. No build step, external fonts or site ana
 ## The Cube privacy policy
 
 `en/games/the-cube/privacy/index.html` is The Cube's effective privacy policy,
-effective **September 30, 2026**, last updated **October 1, 2026**. It covers
+effective **September 30, 2026**, last updated **October 3, 2026**. It covers
 Android versions, including test versions, support correspondence and this
 website. The public policy URL is
 https://monsoonisle.github.io/en/games/the-cube/privacy/.
@@ -19,23 +19,29 @@ in every build.
 
 The policy reflects the following verified source and console facts:
 
-- Usage statistics and Java/NDK crash-diagnostic sharing are independent and
-  default off. The first-use notice offers both choices unselected, saves a
-  refusal and allows later changes in settings. Turning statistics off resets
-  the Analytics SDK's local data. Turning diagnostics off requests deletion of
-  unsent reports; full disabling takes effect on the next app launch. Reports
-  can exist locally while sharing is off, and previous uploads are not recalled.
+- Production uses one Google UMP form explicitly describing ads, Firebase gameplay
+  statistics and Crashlytics stability reports. Agree to all permits the three
+  together; Choose separately and No thanks retain independent purpose choices.
+  Own purposes use consent: device storage (1), advertising measurement (7), content
+  measurement (8), services development (10). Statistics require 1+8, app ad events
+  also require 7, and crash reporting for stability improvement requires 1+10.
+  Native settings may turn either optional service off; silent refresh cannot
+  re-enable it. Invalid or interrupted consent records keep optional collection off.
+  Turning statistics off resets local Analytics. Turning diagnostics off requests
+  deletion of unsent reports, with full SDK disabling at next launch; transmitted
+  or in-progress reports cannot be recalled. Development retains test choices.
 - Gameplay Analytics uses a fixed field set: app/build context, mode, level,
   outcomes, scores, revives, a per-attempt identifier and ad outcomes/error codes.
   Separate event-deduplication IDs stay local. Custom events do not contain saved
   games, names, emails, free-text errors or a custom user ID; this does not mean
   SDK data or crash reports are anonymous. Analytics advertising consent
   categories remain denied independently of AdMob choices.
-- Current advertising is restricted to test ads on SDK-recognized test devices,
-  with an adult test-operator confirmation and a successful UMP check. Commercial
-  advertising is disabled. The game has no banners; available placements are
-  game-boundary interstitials and optional rewarded revives. Ad privacy consent,
-  optional telemetry choices and requesting a rewarded ad are separate actions.
+- Production enables owned AdMob placements for ordinary supported phones after
+  UMP permission; fill still depends on Google, readiness and network. No age-test
+  prompt appears in production. Development/closed-test modes retain test operator
+  restrictions, and emulators receive SDK test ads. No banners; placements remain
+  game-boundary interstitials and optional rewarded revives. Refusal preserves
+  permitted limited-ad requests without enabling optional Firebase sharing.
 - The intended audience is 13+. Adult test confirmation does not verify the age
   of all players or establish protections for a general 13+ advertising rollout.
 - On September 30, 2026, the Firebase project `the-cube-63905` was verified as
