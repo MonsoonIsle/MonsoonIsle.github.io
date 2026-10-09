@@ -4,7 +4,7 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width,initial-scale=1">
   <title>The Arrow — Privacy Policy | Monsoon Isle</title>
-  <meta name="description" content="How The Arrow handles local saves, analytics, advertising and support information, including privacy choices and data deletion.">
+  <meta name="description" content="How The Arrow handles local saves, analytics, advertising, optional crash reports and support information, including privacy choices and data deletion.">
   <meta name="theme-color" content="#234c44">
   <link rel="icon" href="/assets/monsoon-isle-icon.png?v=20260918-2" type="image/png">
   <link rel="apple-touch-icon" href="/assets/monsoon-isle-icon.png?v=20260918-2">
@@ -30,7 +30,7 @@
       <aside class="toc" aria-label="Privacy policy contents">
         <a href="#scope">1. Scope and responsibility</a>
         <a href="#local">2. Local and provided information</a>
-        <a href="#analytics">3. Gameplay analytics</a>
+        <a href="#analytics">3. Analytics, promotion and crash reports</a>
         <a href="#ads">4. Advertising</a>
         <a href="#purposes">5. Purposes and legal bases</a>
         <a href="#sharing">6. Sharing and international processing</a>
@@ -46,7 +46,7 @@
           <h2 id="summary-title">At a glance</h2>
           <ul>
 <li>The Arrow is intended for users aged 13 and over and needs no player account. Progress and settings are saved on your device.</li>
-<li>The game uses Firebase Analytics and AdMob. Related technical information and gameplay events may be sent to Google.</li>
+<li>The game uses Firebase Analytics, AdMob and optional Firebase Crashlytics reporting. Depending on your choices, technical information, gameplay and advertising events, and crash reports may be sent to Google.</li>
 <li>Clearing local data resets progress but does not automatically delete information already received by Google.</li>
 <li>For privacy questions or requests, email <a href="mailto:aquark314@gmail.com">aquark314@gmail.com</a>.</li>
           </ul>
@@ -68,7 +68,7 @@
           <p>The game needs no player account and does not ask for your name or contact details. It currently does not request access to precise device location, contacts, the camera or the microphone.</p>
         </section>
         <section id="analytics">
-          <h2>3. Gameplay analytics</h2>
+          <h2>3. Analytics, promotion and crash reports</h2>
           <p>The Arrow uses Google Analytics for Firebase to understand game use, improve gameplay and investigate problems. When analytics collection is enabled by the build and your applicable privacy choices, the game sends Google:</p>
           <ul>
           <li><strong>Gameplay and ad activity:</strong> launches and session duration, level starts and results, progress changes, tutorials, use of hints and rewards, ad requests, impressions and clicks.</li>
@@ -76,7 +76,10 @@
           <li><strong>Identifiers:</strong> randomly generated installation, session and event identifiers. Google's SDK may also process app-instance identifiers and approximate geographic information.</li>
           </ul>
           <p>We use the service to view and analyze analytics data. Random identifiers can link events from the same installation or session, so this information is not necessarily anonymous.</p>
-          <p>Our current Firebase configuration disables advertising-ID collection and ad-personalization signals for Analytics. These settings do not disable AdMob's separate processing.</p>
+          <p>With your applicable privacy choices, Firebase may process advertising identifiers and advertising-related data to measure ad revenue, attribute installs and in-game actions to Google Ads campaigns, and support advertising optimization. Advertising storage, advertising user data and advertising personalization each follow their own consent signals. Unknown or unconfigured advertising purposes stay disabled. Turning off Share gameplay analytics also disables Firebase's advertising purposes. These controls do not disable AdMob's separate processing.</p>
+          <h3>Optional crash reports</h3>
+          <p>Firebase Crashlytics helps investigate crashes, freezes and technical errors. Reports can include crash traces, native crash data, device and operating system details, app version, diagnostic identifiers and, when analytics is enabled, preceding analytics events. We do not add your name, email address or complete saved game to crash reports.</p>
+          <p>Share crash reports is a separate, optional setting and is off by default. Automatic report upload stays disabled. Enabling sharing takes effect after restarting the game; reports from sessions that remained enabled are submitted on a later launch while sharing is still enabled. Turning sharing off invalidates the current session for later submission, including if it is turned on again before restarting. The SDK can keep crash information locally while sharing is off; pending reports from those sessions are queued for deletion at the next launch. Reports already submitted or in transit cannot be recalled by this switch.</p>
         </section>
         <section id="ads">
           <h2>4. Advertising</h2>
@@ -87,14 +90,14 @@
         </section>
         <section id="purposes">
           <h2>5. Purposes and legal bases</h2>
-          <p>We handle the information described above to run and save game features; understand gameplay and fix problems; deliver and measure ads, grant rewards and prevent abuse; respond to support and privacy requests; and meet applicable legal obligations.</p>
+          <p>We handle the information described above to run and save game features; understand gameplay and fix problems; deliver and measure ads, evaluate and optimize game promotion, grant rewards and prevent abuse; respond to support and privacy requests; and meet applicable legal obligations.</p>
           <p>Where a legal basis is required, processing necessary for game features and support you request is based on performing the relevant service agreement. Mandatory retention or disclosure is based on legal obligations. Where permitted and not overridden by your rights and interests, security, troubleshooting and service improvement may rely on corresponding legitimate interests.</p>
           <p>Analytics, device information access or personalized advertising requiring consent must take place only after valid consent. Legitimate interests cannot replace legally required consent. You can request withdrawal under section 8. Reading this policy or continuing to play does not itself constitute consent to that processing.</p>
         </section>
         <section id="sharing">
           <h2>6. Sharing and international processing</h2>
           <ul>
-          <li><strong>Google:</strong> receives the information in sections 3 and 4 through Firebase Analytics and AdMob under the applicable service terms and privacy information.</li>
+          <li><strong>Google:</strong> receives the information in sections 3 and 4 through Firebase Analytics, AdMob, Google Ads integrations and optional Firebase Crashlytics under the applicable service terms and privacy information.</li>
           <li><strong>Hosting and communications providers:</strong> GitHub Pages hosts the website and email providers process support messages, each handling information needed for its functions.</li>
           <li><strong>Legal and security needs:</strong> we may disclose information necessary to comply with applicable law, respond to lawful requests or protect users and services, limiting disclosure to what is reasonably necessary.</li>
           <li><strong>Your instructions or consent:</strong> we provide additional notice and obtain consent where required before sharing personal information for other purposes.</li>
@@ -108,6 +111,7 @@
           <ul>
           <li><strong>Local saves and analytics records:</strong> the game saves progress, settings and local analytics records on your device until updated, overwritten or removed. Clear The Arrow's storage in Android settings or uninstall it to remove local data; this resets progress. Migration or backup services may keep separate copies that you need to manage through them.</li>
           <li><strong>Firebase Analytics data:</strong> Google hosts this data. Our retention policy for applicable user-level and event-level analytics data is <strong>2 months</strong>, with expired data removed through Google's scheduled deletion process. This period does not apply to standard aggregate reports, AdMob advertising data or local device records. See <a href="https://support.google.com/analytics/answer/7667196">Google Analytics data retention</a>.</li>
+          <li><strong>Firebase Crashlytics data:</strong> Google retains crash traces, extracted native crash data and associated identifiers for 90 days before beginning removal from live and backup systems. Native minidumps are held temporarily for processing. This is separate from the Analytics two-month setting. See <a href="https://firebase.google.com/support/privacy">Firebase privacy and security information</a>.</li>
           <li><strong>AdMob advertising data:</strong> Google retains this for purposes such as ad delivery, measurement and fraud prevention, under applicable policies and legal requirements. Periods can differ by data type and do not follow the Analytics retention setting. See <a href="https://policies.google.com/technologies/retention">Google's data retention information</a>.</li>
           <li><strong>Website hosting logs:</strong> GitHub retains these under its hosting service purposes, privacy statement and applicable law.</li>
           <li><strong>Support correspondence:</strong> we keep it only as needed to resolve issues, follow up on requests and meet legal obligations, then delete or anonymize it when no longer needed.</li>
@@ -119,6 +123,7 @@
           <h3>In-game choices</h3>
           <p>In Settings, use <strong>Privacy choices</strong> when available to review or withdraw advertising and analytics consent, or exercise applicable advertising opt-out choices. Messages and available choices depend on your region.</p>
           <p>You can also turn off <strong>Share gameplay analytics</strong> in Settings in any region. Turning it back on does not override a refusal in your privacy choices. Disabling analytics stops further analytics collection and clears pending local analytics events without deleting game progress. It does not automatically delete data already received by Google.</p>
+          <p><strong>Share crash reports</strong> independently controls optional diagnostic report submission. It is off by default and is not required to play. Enabling takes effect after restarting; disabling invalidates this session for later submission. Section 3 explains local storage, later-launch submission and reports already in transit.</p>
           <h3>Device and advertising choices</h3>
           <p>Android or Google settings offer advertising privacy options, including resetting or deleting your advertising ID. Menus vary by device and operating system. These actions do not stop all analytics or ad processing or erase data already collected.</p>
           <h3>Making a privacy request</h3>
