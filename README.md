@@ -69,6 +69,63 @@ regional notices, plus any required operator/representative details. The current
 adult-only test restriction does not implement those broader release controls.
 Keep these implementation checks separate from the policy's effective status.
 
+### The Cube policy source and updates
+
+Edit `en/games/the-cube/privacy/policy.json` for all Cube policy text and metadata.
+It is the canonical source for the generated `index.html`, the game's bundled
+offline copy and compatible online updates. The public data endpoint is
+https://monsoonisle.github.io/en/games/the-cube/privacy/policy.json.
+The HTML is committed, so GitHub Pages needs no deployment build step or JavaScript.
+`index.template.html` contains only the page shell; do not edit the generated
+`index.html` directly. Both tools below use Python 3's standard library.
+
+For each policy update:
+
+1. Edit the JSON, increase the positive integer `revision`, and update `updated_at`
+   and the introduction's displayed last-updated date together. Change
+   `effective_date` and its displayed date only when the effective date changes.
+   Preserve `schema_version: 1`, `policy_id: "the-cube"`, `language: "en"` and the
+   existing `source_url`. A new incompatible schema requires app support first.
+2. Set `min_app_version` and `max_app_version` to the inclusive compatible app
+   range, using three components of 1–9 ASCII digits such as `1.0.9`; leading zeros
+   are accepted. An empty maximum means no upper bound. Keep older app behavior and
+   data practices in mind when choosing this range. Publishing text does not update
+   app behavior or grant consent.
+3. Regenerate, check and review the page. The schema permits at most 262,144 UTF-8
+   bytes, 64 sections, 256 paragraphs total, 256 characters for the title and
+   16,384 characters per heading or paragraph.
+   The first section provides the introduction and the second provides the summary;
+   later sections appear in the contents list. Prefix list items with `• `.
+
+```sh
+python3 scripts/build_cube_privacy.py
+python3 scripts/build_cube_privacy.py --check
+python3 -m unittest discover -s scripts -p test_build_cube_privacy.py -v
+```
+
+Before a game release, sync its bundled fallback from this reviewed checkout
+(commands run from the website root, with the game in the sibling `Tesselox` folder):
+
+```sh
+python3 ../Tesselox/scripts/sync_privacy_policy.py --website-root . --update --app-version 1.0.9
+python3 ../Tesselox/scripts/sync_privacy_policy.py --website-root . --check --app-version 1.0.9
+```
+
+Use the release's actual app version. `--check` compares the complete policy data
+without writing. Updates reject revision downgrades or changed data with a reused
+revision and validate before atomically replacing the bundle. Neither game builds
+nor these local commands fetch the network. A deliberate check against the deployed
+policy uses the exact trusted HTTPS URL; redirects and other origins are rejected:
+
+```sh
+python3 ../Tesselox/scripts/sync_privacy_policy.py --url https://monsoonisle.github.io/en/games/the-cube/privacy/policy.json --check --app-version 1.0.9
+```
+
+Commit the JSON, generated HTML and relevant source changes together. After
+publishing, verify both public HTML and JSON; local tests or a push alone do not
+prove deployment. Rebuild the game's native assets after changing its bundled
+policy, following the game's release instructions.
+
 ### The Cube app-ads.txt
 
 The root `app-ads.txt` includes this authorized direct-seller entry for the
