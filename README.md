@@ -103,12 +103,13 @@ python3 scripts/build_cube_privacy.py --check
 python3 -m unittest discover -s scripts -p test_build_cube_privacy.py -v
 ```
 
-Before a game release, sync its bundled fallback from this reviewed checkout
-(commands run from the website root, with the game in the sibling `Tesselox` folder):
+Before a game release, sync its bundled fallback from this reviewed checkout.
+Run these commands from the website root, setting `game_root` to your game checkout:
 
 ```sh
-python3 ../Tesselox/scripts/sync_privacy_policy.py --website-root . --update --app-version 1.0.9
-python3 ../Tesselox/scripts/sync_privacy_policy.py --website-root . --check --app-version 1.0.9
+game_root="/path/to/TheCube"
+python3 "$game_root/scripts/sync_privacy_policy.py" --website-root . --update --app-version 1.0.9
+python3 "$game_root/scripts/sync_privacy_policy.py" --website-root . --check --app-version 1.0.9
 ```
 
 Use the release's actual app version. `--check` compares the complete policy data
@@ -118,7 +119,7 @@ nor these local commands fetch the network. A deliberate check against the deplo
 policy uses the exact trusted HTTPS URL; redirects and other origins are rejected:
 
 ```sh
-python3 ../Tesselox/scripts/sync_privacy_policy.py --url https://monsoonisle.github.io/en/games/the-cube/privacy/policy.json --check --app-version 1.0.9
+python3 "$game_root/scripts/sync_privacy_policy.py" --url https://monsoonisle.github.io/en/games/the-cube/privacy/policy.json --check --app-version 1.0.9
 ```
 
 Commit the JSON, generated HTML and relevant source changes together. After
