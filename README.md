@@ -5,6 +5,69 @@ Static HTML/CSS site for GitHub Pages. No build step, external fonts or site ana
 - English home: https://monsoonisle.github.io/en/
 - English privacy policy (Google Play): https://monsoonisle.github.io/en/games/the-arrow/privacy/
 
+## Dramadoku privacy policy
+
+Dramadoku is the **third** homepage game, after The Arrow and The Cube. Its
+English policy is maintained directly in `en/games/dramadoku/privacy/index.html`:
+https://monsoonisle.github.io/en/games/dramadoku/privacy/.
+It is effective and last updated **October 16, 2026**. The user confirmed
+**mengjingchanyu@gmail.com** as the product's public privacy/support contact and
+**13 and over** as its intended audience. This is not an assigned store rating.
+The intended distribution is Google Play-supported countries/regions outside
+China; actual country selection, regional ratings and availability are not yet
+configured or verified. Do not present the game as publicly released.
+
+The policy describes the current offline Android release, package
+`com.monsoonisle.dramadoku`, initially version 0.1.0 / versionCode 1. Source and
+the recorded APK/AAB verification were checked against these disclosures:
+
+- Puzzle state, notes, hints, times/results, preferences and tutorial history are
+  local. No player account, cloud saves, ads, analytics SDK or third-party crash
+  reporting is integrated. The Android release requests only VIBRATE, not
+  INTERNET, and disables Android automatic app-data backup.
+- Support emails are separate voluntary correspondence; the policy explains
+  their use, provider handling, retention criteria and deletion requests.
+- GitHub Pages processes website visit information even though this website has
+  no tracking scripts, cookies or local storage of its own.
+- Publishing this page does not add an in-game policy entry, change the APK/AAB,
+  complete Play Data safety or publish a testing track. The app still needs an
+  accessible policy link or text before the closed-test submission.
+
+The card reuses the current 512×512 Android D icon (`assets/dramadoku.png`), an
+interim release asset rather than a newly approved final illustration. Existing
+product cards, policies, shared CSS and `app-ads.txt` should retain their behavior.
+No Dramadoku advertising entry is needed for this offline build.
+
+When updating the game, recheck its actual permissions, SDKs and data handling
+before changing this policy. Keep the effective/update dates, sitemap and app's
+policy text consistent; an online policy change does not grant consent or alter
+an installed build. Do not copy the other games' advertising/analytics disclosures
+unless Dramadoku actually adopts those services.
+
+For validation, serve the site using the Preview command below. Check the third
+card and its links, unique section IDs, canonical URL, dates/contact, sitemap and
+all local assets. Review the homepage and policy at narrow mobile, landscape,
+tablet and desktop widths; verify section navigation and keyboard focus. After
+publishing, check public HTML and assets against the committed files and confirm
+the GitHub Pages build, rather than treating a push as proof of deployment.
+
+Validation on October 16, 2026: balanced HTML, 12 unique policy IDs, 30 policy
+references and 22 homepage references passed the local link/asset checks. The
+homepage orders the cards Arrow → Cube → Dramadoku. Both pages passed browser
+overflow/image checks at 320×720, 390×844, 844×390, 768×1024 and 1280×900;
+section navigation and visible keyboard focus worked. The mobile and desktop
+views were visually reviewed. The two existing cards, both existing policies,
+shared CSS and `app-ads.txt` remained byte-identical. `git diff --check` passed.
+
+References reviewed October 16, 2026:
+[Google Play User Data](https://support.google.com/googleplay/android-developer/answer/10144311?hl=en),
+[target audiences](https://support.google.com/googleplay/android-developer/answer/9867159?hl=en),
+[regional content ratings](https://support.google.com/googleplay/android-developer/answer/9859655?hl=en),
+and [GitHub Pages visitor logging](https://docs.github.com/en/pages/getting-started-with-github-pages/what-is-github-pages).
+The game's private `docs/DEPLOYMENT.md` and `docs/releases/ANDROID_0_1_0_1.json`
+record its build verification; private code, packages and signing credentials
+are not copied into this public website repository.
+
 ## The Cube privacy policy
 
 `en/games/the-cube/privacy/index.html` is The Cube's effective privacy policy,
