@@ -1,0 +1,76 @@
+{
+  "schema_version": 1,
+  "document_id": "the-cube-terms",
+  "language": "en",
+  "revision": 1,
+  "title": "Terms of Use",
+  "updated_at": "2026-10-21",
+  "effective_date": "2026-10-21",
+  "source_url": "https://monsoonisle.github.io/en/games/the-cube/legal/releases/1/terms/",
+  "sections": [
+    {
+      "heading": "The Cube: Chain Reaction",
+      "paragraphs": [
+        "Effective date: October 21, 2026 · Last updated: October 21, 2026 · Developer: Monsoon Isle",
+        "These terms cover Android versions 1.0.14 and later of The Cube: Chain Reaction (com.tesselox.game), including test builds. Contact: mengjingchanyu@gmail.com."
+      ]
+    },
+    {
+      "heading": "1. Accepting and using the game",
+      "paragraphs": [
+        "Before entering these versions, you must select Accept for the displayed Terms of Use and Privacy Policy. Closing or returning does not accept them. If you do not agree, do not accept or use these versions. Reading the documents does not submit confirmation.",
+        "The game is intended for users aged 13 and over. If you are a minor, obtain a parent’s or guardian’s authorization where applicable law requires it. Accept does not establish adulthood or replace required parental authorization."
+      ]
+    },
+    {
+      "heading": "2. Permission and fair use",
+      "paragraphs": [
+        "Monsoon Isle grants you a personal, limited, non-exclusive and non-transferable permission to install and play the game on a device you are entitled to use, subject to these terms and applicable law. The game and its artwork, audio, code and other content remain protected by their owners’ intellectual-property rights.",
+        "Do not unlawfully copy, distribute, sell or exploit the game or its content; interfere with security or services; introduce malicious code; falsify ad rewards; or use the game to harm others. Restrictions on modification or reverse engineering apply only to the extent permitted by law and do not remove rights the law gives you."
+      ]
+    },
+    {
+      "heading": "3. Progress, availability and updates",
+      "paragraphs": [
+        "No game account or developer cloud-save service is provided. Progress and preferences are stored locally; clearing storage, uninstalling, device loss or incompatible external changes can remove them. Keep your device secure. Android backup or migration is controlled separately by the platform.",
+        "You may play offline after saving confirmation for a complete applicable document set. Some functions need a network or third-party service. We may update, change or discontinue features, and test features can differ from production. We do not guarantee continuous availability or compatibility with every device. Required legal rights and remedies remain available.",
+        "If a new applicable document set requires confirmation, the app asks for a new Accept before continued play and the covered collection, after a safe handoff for current saves and earned rewards. You may stop using the game if you do not agree."
+      ]
+    },
+    {
+      "heading": "4. Advertising and rewards",
+      "paragraphs": [
+        "The game may show interstitial ads and offer optional rewarded revives. Advertising depends on SDK permission, provider availability, connectivity, age restrictions and your separate advertising choices. A rewarded revive is granted when the ad reports that its reward was earned; requesting or opening an ad alone does not guarantee a reward.",
+        "Accepting these documents does not grant every advertising purpose. UMP manages advertising choices separately; you can save partial choices or no grants and reopen advertising management in settings. A refusal, form failure or unavailable ad does not revoke a saved entry confirmation. Watching a rewarded ad is not blanket permission for additional data processing."
+      ]
+    },
+    {
+      "heading": "5. Privacy and third-party services",
+      "paragraphs": [
+        "The Privacy Policy in the same document set explains local data, Firebase Analytics, Firebase Crashlytics, GameAnalytics Collection API, advertising, support, retention and rights. After Accept, eligible builds use the ordinary analytics and crash reporting described there; no separate in-game off switches are offered. Existing younger-player restrictions still apply. If you disagree, do not accept or use these versions; you may contact us to exercise applicable privacy rights.",
+        "Google, GameAnalytics, app stores, hosting providers and linked websites have their own terms and policies for their services. Their practices and availability are outside our direct control; this does not remove our responsibilities under applicable law."
+      ]
+    },
+    {
+      "heading": "6. Support and ending use",
+      "paragraphs": [
+        "You may stop using and uninstall the game at any time. This does not automatically delete information already received by a provider; contact mengjingchanyu@gmail.com for support or a privacy request. Do not send passwords or unnecessary sensitive information.",
+        "We may restrict use that materially breaches these terms or threatens the game, services or other users, subject to applicable law. Ending use does not transfer ownership of the game or remove rights and obligations that by their nature continue."
+      ]
+    },
+    {
+      "heading": "7. Responsibility and legal rights",
+      "paragraphs": [
+        "We provide the game with reasonable care, but software and third-party services can have errors, interruptions or data loss. To the extent permitted by applicable law, the game is provided as available without additional guarantees of uninterrupted, error-free service or fitness for every purpose.",
+        "We do not exclude or limit liability where doing so is unlawful, including any non-excludable consumer rights, fraud, deliberate misconduct or other liability that applicable law protects. Any otherwise permitted limitation applies only to the extent the law allows. These terms do not choose an exclusive court, impose arbitration, or take away mandatory protections that apply where you live."
+      ]
+    },
+    {
+      "heading": "8. Changes and contact",
+      "paragraphs": [
+        "We may revise these terms and their date when the game or its conditions change. New applicable sets are versioned with the Privacy Policy and require the confirmation described above. If part of these terms is unenforceable, the remaining terms apply to the extent permitted by law.",
+        "Questions about these terms or the game: mengjingchanyu@gmail.com."
+      ]
+    }
+  ]
+}
