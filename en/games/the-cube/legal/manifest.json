@@ -2,7 +2,7 @@
   "schema_version": 1,
   "app_id": "com.tesselox.game",
   "language": "en",
-  "revision": 1,
+  "revision": 2,
   "releases": [
     {
       "revision": 1,
@@ -23,6 +23,28 @@
         "terms": {
           "revision": 1,
           "sha256": "cb65ccad0ed15507d81a721bdc166265a6e9abbbcebf6e00f4ca153bef4927e3"
+        }
+      }
+    },
+    {
+      "revision": 2,
+      "min_app_version": "1.0.14",
+      "max_app_version": "",
+      "effective_date": "2026-10-21",
+      "notice_version": 2,
+      "recipients": [
+        "firebase_analytics",
+        "firebase_crashlytics",
+        "gameanalytics_collection"
+      ],
+      "documents": {
+        "privacy": {
+          "revision": 4,
+          "sha256": "23dd3eb5dd221a52c95e9ce3b557f72630839dd3c8b4eb54194be2c0c044719e"
+        },
+        "terms": {
+          "revision": 2,
+          "sha256": "7786dd74f12127f8d1472d1ead4c0de85e294db6e594b24bc1e0c802f0b849e5"
         }
       }
     }

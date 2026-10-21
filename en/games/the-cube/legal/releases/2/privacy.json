@@ -1,0 +1,155 @@
+{
+  "schema_version": 1,
+  "language": "en",
+  "title": "Privacy Policy",
+  "document_id": "the-cube-privacy",
+  "revision": 4,
+  "updated_at": "2026-10-21",
+  "effective_date": "2026-10-21",
+  "source_url": "https://monsoonisle.github.io/en/games/the-cube/legal/releases/2/privacy/",
+  "sections": [
+    {
+      "heading": "The Cube: Chain Reaction",
+      "paragraphs": [
+        "Effective date: October 21, 2026 · Last updated: October 21, 2026 · Developer: Monsoon Isle",
+        "How The Cube handles local progress, gameplay statistics, crash diagnostics and advertising in app versions 1.0.14 and later. Earlier versions remain covered by their existing policy at https://monsoonisle.github.io/en/games/the-cube/privacy/.",
+        "Before entering the game, you must read the notice and select Accept for the Privacy Policy and Terms of Use. Accept is the only entry confirmation. Closing or returning from the notice does not accept it, and you cannot play until confirmation is saved. Accept permits the ordinary analytics and crash reporting described here, subject to existing younger-player restrictions; advertising choices are separate."
+      ]
+    },
+    {
+      "heading": "At a glance",
+      "paragraphs": [
+        "• The Cube can be played offline after accepting the applicable documents, without an account. Progress and settings are saved on your device.",
+        "• Accept covers ordinary Firebase Analytics, Firebase Crashlytics and GameAnalytics Collection API processing described below. There are no in-game switches to turn ordinary usage statistics or crash reporting off independently while continuing to play.",
+        "• Advertising choices use Google User Messaging Platform (UMP), separately from Accept. You can save partial choices or choices that grant no advertising purposes, and manage advertising choices again in settings. These choices do not withdraw your entry confirmation.",
+        "• Production builds request ads only as permitted by the advertising SDK, applicable choices and younger-player restrictions. Placements are interstitial ads and optional rewarded revives, with no banners. Ad availability is not guaranteed.",
+        "• Local deletion or stopping use does not erase data already received by providers. For privacy questions or rights requests, email mengjingchanyu@gmail.com."
+      ]
+    },
+    {
+      "heading": "1. Scope and contact",
+      "paragraphs": [
+        "Monsoon Isle (\"we\", \"us\" or \"our\") develops The Cube: Chain Reaction. This policy covers Android versions of the game, including test versions (package: com.tesselox.game), related support correspondence and visits to this website. Other games have their own policies.",
+        "Device identifiers, app-instance identifiers and IP addresses may be personal information even when a service does not ask for your name.",
+        "Monsoon Isle is responsible for the processing described in this policy that we determine. For privacy or support, contact mengjingchanyu@gmail.com."
+      ]
+    },
+    {
+      "heading": "2. Local data and support",
+      "paragraphs": [
+        "The game stores progress, scores, unfinished games, privacy choices and preferences on your device. Small local records help prevent duplicate gameplay events and duplicate ad rewards. It does not upload complete saved-game files to a developer-operated server or provide cloud saves. Android backup, migration and store services may have their own data practices. The app also stores the applicable complete legal documents and a separate private confirmation record binding their versions, byte hashes and disclosed recipient scope; these records support entry checks and are separate from saved-game progress.",
+        "If you contact us, we receive the email address, message and attachments you choose to send. We use that information to respond, investigate issues and handle your request. Please avoid sending passwords or unnecessary sensitive information."
+      ]
+    },
+    {
+      "heading": "3. Usage analytics after Accept",
+      "paragraphs": [
+        "After your explicit Accept has been saved for the applicable document set, eligible Android builds enable ordinary usage analytics through Google Analytics for Firebase and the GameAnalytics Collection API. Reading or downloading documents, a previous-version switch or a Google advertising choice does not substitute for this confirmation. Before a valid confirmation, these analytics services do not start collecting or transmitting gameplay data. Every newly applicable document set requires a new saved Accept before collection and play continue.",
+        "Google Analytics for Firebase processes app usage, an app-instance identifier, device and app information, language, technical information and approximate location derived from network information. We use it to understand sessions, game use, difficulty, progression, revives and reliability. Google may also collect documented automatic Analytics events. See Google’s Analytics data-collection information (https://support.google.com/analytics/answer/11593727).",
+        "The integration does not supply your name, email address, saved-game file or a custom user ID to Firebase Analytics. Automatic screen reporting remains disabled. Firebase Analytics may collect or process the Android advertising ID only when the applicable advertising-storage permission has actually been granted and SDK and device settings allow it. Advertising user-data processing and ad personalization each require their separate applicable permission. Accept alone does not grant advertising storage, advertising user data or advertising personalization; any advertising use or connection of identifiers additionally follows applicable advertising permission.",
+        "Gameplay statistics record the start and end of attempts, challenge completions, revives, and ad requests and outcomes. Ad-event statistics additionally require the applicable advertising-measurement permission. Depending on the event, they include the app version and build type, game mode, level, score, revive count and a randomly generated game-attempt identifier, plus the relevant outcome, ad format or standardized error code. The attempt identifier relates events within a game attempt; it is not an account or a developer-assigned persistent user ID for Firebase Analytics. Separate IDs used to prevent counting an event twice stay on your device and are not sent as event parameters. Our gameplay events use a limited set of fields rather than free-text messages or saved-game contents. Google may also collect its documented automatic Analytics events. These identifiers can link related activity, so the data is not necessarily anonymous.",
+        "Configured production builds also send selected statistics directly to GameAnalytics through its HTTPS Collection API; the app does not include the GameAnalytics SDK. These events cover game mode, levels, scores, offers, tutorials, progression, revives, ad impressions, earned rewards and show failures, and impression-level ad-revenue information such as value, currency, precision, ad format and mediation adapter. We use them to understand gameplay, progression and advertising reliability and revenue. GameAnalytics receives a randomly generated app-installation identifier used for the current analytics authorization scope, random session identifiers and session counters, timestamps, app/build details, device manufacturer and model, and operating-system information. Its HTTPS endpoint also receives your IP address. These identifiers can relate activity across sessions during that authorization scope, so this data is not necessarily anonymous. The integration does not collect or send advertising IDs (GAID/OAID), App Set ID, names, email addresses or saved-game files to GameAnalytics, and does not send it crash reports. Firebase and Crashlytics continue to use their separate documented data and controls.",
+        "Configured test builds use separate projects, credentials, local queues and installation/session identities from production; a test event is not evidence of production data receipt. Test builds can process the same categories described here when their applicable confirmation and restrictions permit it.",
+        "There is no in-game ordinary-analytics off switch after Accept. Events may wait in bounded app-owned local queues and be retried while the relevant authorization remains valid. A document-update pause stops new collection and transmission while retaining eligible pending ordinary events; it does not automatically erase previously collected data or reset every analytics identity. Newly disclosed recipients do not receive historical events collected under an earlier recipient scope. Withdrawing advertising-measurement permission clears pending advertising events and related app-owned advertising connections; it does not disable ordinary gameplay analytics. An in-flight request or data already received by a provider cannot be recalled by a local change. See retention, deletion and rights below."
+      ]
+    },
+    {
+      "heading": "4. Crash diagnostics after Accept",
+      "paragraphs": [
+        "After your explicit Accept has been saved for the applicable documents, eligible Android builds enable Firebase Crashlytics, including Java and native (NDK) crash reporting and the associated Firebase Sessions service. We use reports to identify stability problems and improve future versions. There is no separate in-game crash-reporting off switch after Accept.",
+        "Reports can include crash time, stack traces and exception messages, app version, device and operating-system information, installation/session identifiers and native crash data. Diagnostic reports are not guaranteed to be anonymous. If usage statistics are also enabled, Analytics events may appear as diagnostic breadcrumbs. We do not intentionally attach saved games, names, email addresses or a custom user ID.",
+        "Before the first valid confirmation, Crashlytics is not initialized by the app and automatic uploads remain disabled. After initialization, pausing reporting for updated documents cannot guarantee that no crash is captured locally; reports may remain on the device for later delivery when reporting is permitted again. This update pause is not an instruction to erase every eligible pending report. We cannot recall an upload already in progress or information already received by Google.",
+        "See Firebase's crash-data description (https://firebase.google.com/support/privacy#crash-stored-info) and Crashlytics' collection controls (https://firebase.google.com/docs/reference/android/com/google/firebase/crashlytics/FirebaseCrashlytics)."
+      ]
+    },
+    {
+      "heading": "5. Advertising",
+      "paragraphs": [
+        "The game uses Google AdMob. Production builds can request commercial ads on ordinary supported phones, subject to privacy choices, existing younger-player restrictions and ad availability. There is no adult test-operator question in production. Development builds use Google sample ads, and closed-test builds, when enabled, restrict test ads to eligible devices and adult test operators. Emulators remain SDK test devices. Test requests and privacy updates can still send device and network information to Google.",
+        "Ads need a network connection and may be unavailable. There are no banner ads. When advertising is available in your version, the placements are:",
+        "• Survival: At most one interstitial ad at an ordinary game-over. A final game-over within 60 seconds after a successful rewarded revive skips that interstitial.",
+        "• Challenges: One interstitial opportunity after every three first-time level completions. Replaying a previously completed level does not advance this count.",
+        "• Optional revives: In either mode, you can choose a rewarded ad for one revive, with at most two rewarded revives per game or challenge attempt. The revive is granted only when the ad reports that the reward was earned.",
+        "Advertising privacy choices are handled separately through Google UMP and the Google Mobile Ads SDK. The app requests a current privacy update and presents the required form before making eligible ad requests. The first message offers Consent and Manage options; its management page uses the SDK’s Confirm choices action. Partial choices and choices granting no advertising purposes can be saved. The in-game advertising-management entry remains available; a reopened SDK form may show its standard additional actions and wording. The SDK’s current state and applicable purpose/vendor signals determine whether and how ads may be requested. Accept never fills in those signals. A form error, refusal or unavailable ad does not revoke a saved entry confirmation or prevent accepted offline gameplay.",
+        "Advertising messages identify purposes and participating partners, with links to their privacy information. Their content and availability can depend on region and provider configuration. Declining personalization does not necessarily stop all ad-related processing: permitted non-personalized or limited ads can still use data for delivery, security and measurement. A saved partial choice is not a grant of every purpose; the app uses only the permissions actually available for the relevant processing. Ad availability depends on the SDK, providers and network.",
+        "Google and participating advertising partners may process IP addresses and inferred general location; app and ad interactions, such as launches, taps and video views; performance and diagnostic information; and device or account identifiers, including the Android advertising ID, app set ID and, where applicable, identifiers relating to signed-in accounts on the device. Processing depends on the service, device settings and applicable privacy choices. See Google's Mobile Ads data disclosure (https://developers.google.com/admob/android/privacy/play-data-disclosure).",
+        "Ad data is used to deliver and measure advertising, prevent fraud and, where permitted, personalize ads. AdMob and its partners are separate from ordinary Firebase Analytics, Crashlytics and GameAnalytics collection. Accept does not authorize all advertising processing, and declining advertising purposes does not turn off the ordinary analytics and crash reporting covered by Accept. Choosing a rewarded ad requests that reward and does not itself grant additional advertising purposes or authorize unrelated data uses."
+      ]
+    },
+    {
+      "heading": "6. Purposes and legal bases",
+      "paragraphs": [
+        "Local data supports gameplay, progress restoration and remembering the applicable document confirmation. Ordinary statistics help us understand and improve gameplay; crash reports support stability improvements; advertising supports the game and provides chosen revive rewards. Support information is used to answer messages and handle requests.",
+        "The entry notice describes the processing covered by Accept and requires an explicit saved confirmation for use of these versions. There is no separate in-game rejection or off switch for ordinary analytics or crash reporting while continuing to play. If you do not agree, do not select Accept and do not use these versions. You may stop using or uninstall the app and contact us about rights, withdrawal or deletion. These steps do not automatically erase data previously sent. This entry design does not limit rights provided by applicable law.",
+        "Where applicable law requires a legal basis, we seek your informed agreement for the disclosed analytics and diagnostic processing and use separate advertising choices for processing that requires them. Requiring Accept to use the app does not establish that valid consent exists in every jurisdiction; statutory requirements and rights continue to apply. Processing needed to provide gameplay or support you request is based on performing that service where applicable. Necessary security, abuse prevention and handling of correspondence may rely on legitimate interests where permitted and not overridden by your rights. Legal obligations apply where processing is required by law. Accept and legitimate interests do not replace any additional consent or parental authorization required by law."
+      ]
+    },
+    {
+      "heading": "7. Sharing and international processing",
+      "paragraphs": [
+        "• Google and advertising partners: Google receives information through Analytics and Crashlytics services enabled after Accept and through advertising and consent requests. Advertising partners may receive information to deliver or measure ads and prevent fraud, subject to applicable choices and their roles. Where a consent message provides a partner list, you can inspect the vendors, purposes and linked privacy notices there.",
+        "• GameAnalytics: GameAnalytics receives the statistics described above when enabled in your version and covered by your saved Accept. See its Privacy Notice (https://www.gameanalytics.com/trust/privacy-notice), Data Processing Addendum (https://www.gameanalytics.com/trust/eu-data-processing-addendum) and data-retention documentation (https://docs.gameanalytics.com/event-tracking-and-integrations/data-retention-and-limits/data-retention-practices/).",
+        "• Hosting and email providers: GitHub Pages hosts this website and legal-document downloads. Even before Accept, a request for the manifest or a document exposes the requesting IP address and ordinary network/HTTP metadata to the hosting service. Document requests do not include game analytics identifiers, saved-game contents, advertising identifiers or advertising-choice strings. Email providers process the messages and attachments you choose to send to our contact address.",
+        "• Legal and security needs: We may disclose information we hold where reasonably necessary to meet legal obligations, respond to lawful requests or protect users and our services.",
+        "Providers may act on our instructions or determine some processing for their own purposes under applicable service terms. Advertising disclosures may count as a “sale”, “sharing” or targeted advertising under some laws. See Google's Privacy Policy (https://policies.google.com/privacy) and how Google uses information from partner apps (https://policies.google.com/technologies/partner-sites).",
+        "Information may be processed outside your country, including in the United States, where privacy laws may differ. Google's data-transfer information (https://policies.google.com/privacy/frameworks) describes the mechanisms it uses, including applicable adequacy decisions, Data Privacy Framework commitments and standard contractual clauses. The relevant mechanism depends on the provider, service and transfer. Contact our privacy address for information about transfers associated with our services and applicable safeguards. GameAnalytics describes its international-transfer safeguards, including applicable standard contractual clauses, in its Data Processing Addendum."
+      ]
+    },
+    {
+      "heading": "8. Retention and deletion",
+      "paragraphs": [
+        "Local game data remains until updated or removed, including by clearing app storage or uninstalling, subject to Android backup and migration behavior. Clearing storage resets progress and the local document confirmation; it does not erase provider-side data. Pending app-owned Firebase and GameAnalytics events are bounded (up to 256 queued rows or commands and 256 KiB for each integration, with separate duplicate-prevention records); eligible events can be retried and new events may be dropped when limits are reached. A document-confirmation pause can retain ordinary pending events without sending them. Removing advertising permission clears app-owned pending advertising events and related advertising context while preserving ordinary gameplay identity and progress. A new recipient scope does not authorize replaying historical events to a newly disclosed recipient.",
+        "Google Analytics retention: Our property is configured to retain applicable event-level data for 2 months and user-level data for 14 months. The setting to reset user data on new activity is enabled: new activity restarts the user identifier's retention period, so active users' identifiers can be retained for longer than 14 months from their first use. Expired data is deleted through Google's monthly deletion process. These controls do not apply to standard aggregate reports. See Google Analytics data retention (https://support.google.com/analytics/answer/7667196).",
+        "GameAnalytics retention is separate from the Firebase settings above and depends on the applicable service terms, data type and product. Its published Data Processing Addendum includes different schedules for raw data, player lookups and warehouse data; its product documentation also describes when event details and filters cease to be available. Availability in a dashboard is not a guarantee that all underlying records have been deleted. We do not set a universal GameAnalytics retention period or promise immediate provider-side deletion when you change a local setting. See GameAnalytics’ Data Processing Addendum (https://www.gameanalytics.com/trust/eu-data-processing-addendum) and retention documentation (https://docs.gameanalytics.com/event-tracking-and-integrations/data-retention-and-limits/data-retention-practices/) for the applicable schedules; contact us for help with a deletion request.",
+        "Google documents a 90-day retention period for Crashlytics traces, extracted native-crash data and associated identifiers before removal from live and backup systems begins. Native minidumps are temporary processing data. See Firebase's retention information (https://firebase.google.com/support/privacy).",
+        "Analytics settings do not define retention for Crashlytics, AdMob data, standard aggregate reports, hosting logs or support correspondence. Google and advertising partners retain ad-related data under their policies for delivery, measurement, security, fraud prevention and legal requirements; periods differ by data type. See Google's data-retention information (https://policies.google.com/technologies/retention). GitHub retains hosting information under its privacy notice. We keep support messages as needed to resolve requests, follow up and meet legal obligations, then delete or anonymize them when no longer needed.",
+        "Deleting local data or uninstalling the game does not automatically erase data already sent to a provider. There is no game account to delete. The app has no account linking an email address to an installation. An email address alone may therefore be insufficient to identify a particular Firebase or GameAnalytics record; the random GameAnalytics installation identifier is not an account identity."
+      ]
+    },
+    {
+      "heading": "9. Your choices and privacy rights",
+      "paragraphs": [
+        "In-game and device controls",
+        "Open Settings → More Settings to reach About & Privacy. You can read the complete Privacy Policy and Terms of Use, reopen advertising privacy management, or use Contact Support. The advertising-management entry remains available after Accept. There are no in-game switches to turn ordinary usage statistics or crash diagnostics off separately. You can save partial or non-granting advertising choices without losing your entry confirmation. After accepting compatible documents, offline gameplay does not require an available advertisement or a successful advertising form.",
+        "Android or Google settings may let you reset or delete your advertising ID and manage advertising preferences. Available controls depend on the device and operating-system version. These actions do not erase data already received by providers or stop every form of ad-related processing.",
+        "Privacy requests and regional rights",
+        "Depending on applicable law, you may have rights to know about and access your information, obtain a copy, correct or delete it, restrict processing, request portability, withdraw consent or complain to a supervisory authority. Withdrawal does not affect the lawfulness of processing based on consent before withdrawal.",
+        "Right to object: Where applicable, you can object to processing based on legitimate interests. Some jurisdictions also provide rights to opt out of targeted advertising or the “sale” or “sharing” of personal information, and to appeal a privacy-request decision. Use the advertising privacy controls where available or contact us to exercise these rights. We will not discriminate against you for exercising applicable privacy rights.",
+        "Users in the EEA, UK and Switzerland can contact their local data-protection authority; UK users can contact the Information Commissioner's Office (https://ico.org.uk/make-a-complaint/). Rights and exceptions depend on the law applicable to your request.",
+        "Send requests to mengjingchanyu@gmail.com, with the subject “The Cube Privacy Request” and enough context to identify your request.",
+        "We may need additional information to locate records or verify that a request concerns you. We will respond within applicable legal time limits and explain any exemption, identification limitation or provider-controlled processing that affects the request. An email address alone may not identify records associated with an installation identifier. Please do not send passwords or identity documents unsolicited."
+      ]
+    },
+    {
+      "heading": "10. Intended audience",
+      "paragraphs": [
+        "The Cube is intended for users aged 13 and over and is not directed to children under 13. Store content ratings describe content suitability and are separate from the intended audience and privacy consent requirements.",
+        "Users aged 13 and over may still be minors under local law, and the age for valid privacy consent or app-use agreement can be higher than 13. Obtain parental or guardian authorization where required before accepting or using the app. Accept does not prove adulthood or replace legally required parental authorization.",
+        "The game does not ask for your age or birthday. Age information already saved on a device by a previous version, if any, remains local and is used to preserve existing restrictions. We do not infer your age from your device language or treat an unspecified age as confirmation that you are an adult.",
+        "If saved settings identify a player as under 13, advertising and usage-statistics and crash-report sharing remain disabled. If saved settings identify a player as aged 13–17, analytics and crash sharing remain disabled and advertising requests use restricted treatment and a general-audience content limit. This does not mean that ads send no device or network information.",
+        "Otherwise, ordinary analytics and crash reporting start only after a valid saved Accept and advertising follows the separate applicable choices. An unknown age is not recorded as adulthood. Existing development and closed-test adult test-operator restrictions, where present, remain separate from player age and do not bypass the document or data-processing restrictions. Availability depends on Google and the version you use.",
+        "If you believe a child under 13 has provided us with personal information, or you are a parent or guardian with a privacy concern, contact mengjingchanyu@gmail.com. We will investigate and take appropriate steps, including deletion where required."
+      ]
+    },
+    {
+      "heading": "11. Security",
+      "paragraphs": [
+        "Local data relies on device and operating-system protections. Google’s relevant services and the GameAnalytics Collection API use encrypted network connections. No transmission or storage method guarantees absolute security. Protect your device and share only necessary information when contacting support."
+      ]
+    },
+    {
+      "heading": "12. Website and external links",
+      "paragraphs": [
+        "This static Monsoon Isle website uses no site analytics scripts, tracking cookies or browser local storage. GitHub Pages can process visitors’ and app document-request IP addresses and hosting/request logs under the GitHub Privacy Statement (https://docs.github.com/en/site-policy/privacy-policies/github-general-privacy-statement). Reading a document online is therefore not a promise of zero network data.",
+        "External websites and services apply their own privacy policies. Their notices do not replace our responsibility to describe the game's actual practices."
+      ]
+    },
+    {
+      "heading": "13. Policy updates",
+      "paragraphs": [
+        "We update these documents when features, providers or practices change. The app checks a versioned manifest for an effective document set compatible with its version. A newly applicable set requires a new explicit saved Accept before play and the covered collection continue, at a safe point that preserves an active save or earned ad reward. An update in progress cannot accept unseen replacement text. Complete verified documents are retained in private app storage and bundled for offline reading; when a network refresh fails, the app can use a complete verified compatible copy. Offline use does not prove that the app knows the newest published set. A known applicable update remains pending across restarts and temporary cache deletion. A document download or date change alone does not grant permission.",
+        "Privacy and game support: mengjingchanyu@gmail.com."
+      ]
+    }
+  ]
+}

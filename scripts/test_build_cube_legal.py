@@ -60,7 +60,7 @@ class LegalGeneratorTests(unittest.TestCase):
     def test_generated_pages_match_and_do_not_mutate_source_bytes(self):
         before = {path: path.read_bytes() for path in build.LEGAL_DIR.rglob("*.json")}
         pages = build.generate_pages(build.LEGAL_DIR)
-        self.assertEqual(len(pages), 3)
+        self.assertEqual(len(pages), 2 * len(self.catalog) + 1)
         for relative, raw in pages.items():
             self.assertEqual(raw, (build.LEGAL_DIR / relative).read_bytes())
             self.assertIn(build.DRAFT_NOTICE.encode(), raw)
@@ -68,23 +68,27 @@ class LegalGeneratorTests(unittest.TestCase):
         self.assertEqual(before, {path: path.read_bytes() for path in before})
 
     def test_all_authored_paragraphs_headings_links_and_canonicals_survive(self):
-        for kind in build.KINDS:
-            with self.subTest(kind=kind):
-                document = self.item.documents[kind]
-                page = LegalHTML()
-                page.feed(build.render(document, self.item.release, kind).decode("utf-8"))
-                self.assertFalse(page.errors)
-                self.assertFalse(page.stack)
-                self.assertEqual(page.paragraphs, [p for s in document["sections"] for p in s["paragraphs"]])
-                self.assertEqual(page.headings, [s["heading"] for s in document["sections"]])
-                self.assertEqual(len(page.ids), len(set(page.ids)))
-                self.assertTrue(all(link[1:] in page.ids for link in page.links if link.startswith("#")))
-                self.assertIn(document["source_url"], page.links)
-                self.assertIn(build.document_url(1, kind), page.links)
-                for paragraph in page.paragraphs:
-                    for url in re.findall(r"https://[^\s<>\"()]+", paragraph):
-                        self.assertIn(url.rstrip(".,;:!?"), page.links)
-                self.assertIn("mailto:mengjingchanyu@gmail.com", page.links)
+        for item in self.catalog:
+            for kind in build.KINDS:
+                with self.subTest(release=item.release["revision"], kind=kind):
+                    self.check_authored_document(item, kind)
+
+    def check_authored_document(self, item, kind):
+        document = item.documents[kind]
+        page = LegalHTML()
+        page.feed(build.render(document, item.release, kind).decode("utf-8"))
+        self.assertFalse(page.errors)
+        self.assertFalse(page.stack)
+        self.assertEqual(page.paragraphs, [p for s in document["sections"] for p in s["paragraphs"]])
+        self.assertEqual(page.headings, [s["heading"] for s in document["sections"]])
+        self.assertEqual(len(page.ids), len(set(page.ids)))
+        self.assertTrue(all(link[1:] in page.ids for link in page.links if link.startswith("#")))
+        self.assertIn(document["source_url"], page.links)
+        self.assertIn(build.document_url(item.release["revision"], kind), page.links)
+        for paragraph in page.paragraphs:
+            for url in re.findall(r"https://[^\s<>\"()]+", paragraph):
+                self.assertIn(url.rstrip(".,;:!?"), page.links)
+        self.assertIn("mailto:mengjingchanyu@gmail.com", page.links)
 
     def test_html_and_link_attributes_are_escaped_without_changing_words(self):
         document = deepcopy(self.item.documents["terms"])
