@@ -1,23 +1,30 @@
-# The Cube legal set — draft
+# The Cube legal document catalog
 
-These files are unpublished preparation for app versions 1.0.14 and later. They
-do not change the existing revision 2 policy at `../privacy/policy.json` or imply
-that the proposed runtime behavior has shipped. Publication and platform/config
-verification belong to later PRIVACY-SPLIT batches. No legal review is claimed.
+This catalog covers app versions 1.0.14 and later. Legal set 2 (privacy revision
+4, terms revision 2, notice 2) is the current authored set; set 1 remains immutable
+for document history. Earlier app versions continue to use the policy at
+`../privacy/policy.json`; its raw JSON has not changed. The compatibility HTML
+entry links users to the documents appropriate to their app version.
+
+Website publication, app distribution, SDK message delivery and production
+acceptance are separate steps. Published HTML does not announce an app release or
+establish legal review. Verify deployment and public HTTP bytes in the game's
+PRIVACY-SPLIT-11 record; local generated files alone do not prove deployment.
 
 The website JSON is the authored source. The game bundle is an exact-byte mirror;
-do not edit it independently. Generate/check HTML with:
+do not edit it independently. Maintain the publication-mode HTML with:
 
 ```sh
-python3 -B scripts/build_cube_legal.py
-python3 -B scripts/build_cube_legal.py --check
-python3 -B -m unittest discover -s scripts -p 'test_build_cube_legal.py' -v
+python3 -B scripts/build_cube_legal.py --status published
+python3 -B scripts/build_cube_legal.py --status published --check
+python3 -B scripts/build_cube_privacy.py --check
+python3 -B -m unittest discover -s scripts -p 'test_build_cube_*.py' -v
 ```
 
-The default HTML is marked draft and `noindex`. At the separately authorized
-publication step, `--status published` removes only those HTML status markers;
-use the same status with `--check`. It never changes JSON, hashes or document
-text and does not publish anything by itself.
+The default renderer remains a draft preview with a draft banner and noindex.
+Always pass `--status published` when checking or regenerating this published-mode
+catalog. This removes only status markers; it never changes JSON, document hashes
+or text, and does not deploy the website by itself.
 
 Schema 1 strictly rejects unknown fields, duplicate keys, BOMs, malformed UTF-8,
 unpaired surrogates in authored text, unknown/duplicate recipients and incomplete
@@ -52,7 +59,7 @@ game's `scripts/sync_legal_documents.py --website-root <checkout> --app-version
 no network. Its `--update` mode installs immutable documents first and the manifest
 last, and refuses existing immutable-path mutations or manifest/history downgrades.
 
-Draft facts reuse the existing policy's 15-section baseline. Official sources
+The authored facts reuse the existing policy's 15-section baseline. Official sources
 checked on 2026-10-21 include [Firebase privacy and retention](https://firebase.google.com/support/privacy),
 [UMP controls](https://developers.google.com/admob/android/privacy),
 [Google Mobile Ads Legacy 25.5.0 data disclosure](https://developers.google.com/admob/android/privacy/play-data-disclosure),
@@ -60,6 +67,6 @@ checked on 2026-10-21 include [Firebase privacy and retention](https://firebase.
 [GameAnalytics retention](https://docs.gameanalytics.com/event-tracking-and-integrations/data-retention-and-limits/data-retention-practices/),
 [GameAnalytics DPA](https://www.gameanalytics.com/trust/eu-data-processing-addendum)
 and [GitHub hosting privacy](https://docs.github.com/en/site-policy/privacy-policies/github-general-privacy-statement).
-The retained Analytics 2/14-month property settings are historical configuration
-evidence, pending the batch 09 console re-read before publication; these source
-checks do not verify current private configuration or legal sufficiency.
+Batch 09 independently re-read the Analytics property settings: event data 2 months,
+user data 14 months, reset on new activity enabled. These console observations are
+configuration evidence, not evidence of data receipt or legal sufficiency.

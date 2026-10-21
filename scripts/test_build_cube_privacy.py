@@ -24,13 +24,20 @@ class PolicyHTML(HTMLParser):
         self.current = None
         self.heading = None
         self.errors = []
+        self.in_version_guide = False
+        self.version_guide_text = []
+        self.version_guide_links = []
 
     def handle_starttag(self, tag, attributes):
         attrs = dict(attributes)
+        if tag == "aside" and attrs.get("aria-label") == "Privacy information by app version":
+            self.in_version_guide = True
         if "id" in attrs:
             self.ids.append(attrs["id"])
         if "href" in attrs:
             self.links.append(attrs["href"])
+            if self.in_version_guide:
+                self.version_guide_links.append(attrs["href"])
         if tag in ("p", "li", "h3") or attrs.get("class") == "note":
             self.current = [tag, ""]
         if tag in ("h1", "h2"):
@@ -47,12 +54,16 @@ class PolicyHTML(HTMLParser):
         if self.heading is not None and tag in ("h1", "h2"):
             self.headings.append(self.heading)
             self.heading = None
+        if tag == "aside":
+            self.in_version_guide = False
 
     def handle_data(self, data):
         if self.current:
             self.current[1] += data
         if self.heading is not None:
             self.heading += data
+        if self.in_version_guide:
+            self.version_guide_text.append(data)
 
 
 class GeneratorTests(unittest.TestCase):
@@ -65,11 +76,17 @@ class GeneratorTests(unittest.TestCase):
         self.assertEqual(build.render(self.policy, self.template), (build.POLICY_DIR / "index.html").read_text())
 
     def test_all_authored_paragraphs_and_headings_are_preserved(self):
+        html = build.render(self.policy, self.template)
         page = PolicyHTML()
-        page.feed(build.render(self.policy, self.template))
+        page.feed(html)
         self.assertFalse(page.errors)
         self.assertFalse(page.stack)
-        self.assertEqual(page.blocks, [paragraph for section in self.policy["sections"] for paragraph in section["paragraphs"]])
+        # The compatibility guide is presentation; the historical JSON remains exact.
+        authored_html = build.render(self.policy, "$policy_body")
+        self.assertIn(authored_html, html)
+        authored = PolicyHTML()
+        authored.feed(authored_html)
+        self.assertEqual(authored.blocks, [paragraph for section in self.policy["sections"] for paragraph in section["paragraphs"]])
         self.assertEqual(page.headings, [self.policy["title"]] + [section["heading"] for section in self.policy["sections"][1:]])
         self.assertEqual(len(page.ids), len(set(page.ids)))
         self.assertTrue(all(link[1:] in page.ids for link in page.links if link.startswith("#")))
@@ -78,6 +95,40 @@ class GeneratorTests(unittest.TestCase):
         self.assertIn("mailto:mengjingchanyu@gmail.com?subject=The%20Cube%20Privacy%20Request", page.links)
         for url in re.findall(r"https://[^\s()]+", self.raw.decode()):
             self.assertIn(url.rstrip('\",'), page.links)
+
+    def test_version_guide_links_to_both_complete_newer_documents(self):
+        page = PolicyHTML()
+        page.feed(build.render(self.policy, self.template))
+        expected = ["https://monsoonisle.github.io/en/games/the-cube/legal/releases/2/" + kind + "/"
+                    for kind in ("privacy", "terms")]
+        self.assertEqual(page.version_guide_links, expected)
+        legal_root = build.POLICY_DIR.parent / "legal"
+        manifest = json.loads((legal_root / "manifest.json").read_bytes())
+        release = next(item for item in manifest["releases"] if item["revision"] == 2)
+        self.assertEqual(release["min_app_version"], "1.0.14")
+        for kind, url in zip(("privacy", "terms"), expected):
+            document = json.loads((legal_root / "releases/2" / (kind + ".json")).read_bytes())
+            self.assertEqual(document["source_url"], url)
+            self.assertTrue((legal_root / "releases/2" / kind / "index.html").is_file())
+        self.assertLess(build.render(self.policy, self.template).index('aria-label="Privacy information by app version"'),
+                        build.render(self.policy, self.template).index('class="legal-hero"'))
+
+    def test_version_guide_separates_entry_confirmation_from_advertising_choices(self):
+        page = PolicyHTML()
+        page.feed(build.render(self.policy, self.template))
+        guide = " ".join("".join(page.version_guide_text).split())
+        for required in ("App versions 1.0.14 and later.", "saved Accept for both documents before play",
+                         "Firebase Analytics and GameAnalytics", "Firebase Crashlytics",
+                         "younger-player restrictions", "no separate in-game off switches",
+                         "Advertising choices are separate.", "Google UMP",
+                         "Accept does not grant advertising purposes", "Manage", "Confirm choices",
+                         "save partial choices or choices granting no advertising purposes",
+                         "do not revoke a saved entry confirmation", "App versions 1.0.13 and earlier.",
+                         "their optional usage-statistics and crash-diagnostics controls",
+                         "does not describe the 1.0.14+ entry requirement",
+                         "publication status", "do not announce an app release"):
+            with self.subTest(required=required):
+                self.assertIn(required, guide)
 
     def test_authored_html_is_escaped_and_link_text_preserved(self):
         policy = deepcopy(self.policy)

@@ -59,13 +59,25 @@ class LegalGeneratorTests(unittest.TestCase):
 
     def test_generated_pages_match_and_do_not_mutate_source_bytes(self):
         before = {path: path.read_bytes() for path in build.LEGAL_DIR.rglob("*.json")}
-        pages = build.generate_pages(build.LEGAL_DIR)
+        pages = build.generate_pages(build.LEGAL_DIR, status="published")
         self.assertEqual(len(pages), 2 * len(self.catalog) + 1)
         for relative, raw in pages.items():
             self.assertEqual(raw, (build.LEGAL_DIR / relative).read_bytes())
-            self.assertIn(build.DRAFT_NOTICE.encode(), raw)
-            self.assertIn(b'<meta name="robots" content="noindex">', raw)
+            self.assertNotIn(build.DRAFT_NOTICE.encode(), raw)
+            self.assertNotIn(b'<meta name="robots" content="noindex">', raw)
         self.assertEqual(before, {path: path.read_bytes() for path in before})
+
+    def test_catalog_lists_latest_first_and_labels_retained_document_history(self):
+        pages = build.generate_pages(build.LEGAL_DIR, status="published")
+        index = pages[Path("index.html")].decode()
+        self.assertIn("highest effective set compatible with your app version", index)
+        positions = [index.index(f'<h2>Legal set {item.release["revision"]}</h2>')
+                     for item in sorted(self.catalog, key=lambda item: item.release["revision"], reverse=True)]
+        self.assertEqual(positions, sorted(positions))
+        for relative, raw in pages.items():
+            if relative != Path("index.html"):
+                self.assertIn(b"Older sets are retained for document history", raw)
+                self.assertIn(b"their publication does not mean that they shipped in an app", raw)
 
     def test_all_authored_paragraphs_headings_links_and_canonicals_survive(self):
         for item in self.catalog:

@@ -355,6 +355,7 @@ def _page(title, canonical, content, *, status="draft"):
 def render(document, release, kind, *, status="draft"):
     lines = [f'    <h1>{escape(document["title"])}</h1>',
              f'    <p>Document revision {document["revision"]} · Legal set {release["revision"]} · Effective <time datetime="{document["effective_date"]}">{document["effective_date"]}</time></p>',
+             f'    <p class="note">Use the highest effective legal set compatible with your app version in the <a href="{BASE_URL}">document catalog</a>. Older sets are retained for document history; their publication does not mean that they shipped in an app.</p>',
              '    <nav aria-label="Document contents">']
     for index, section in enumerate(document["sections"], 1):
         lines.append(f'      <a href="#section-{index}">{escape(section["heading"])}</a>')
@@ -376,8 +377,9 @@ def generate_pages(legal_root, *, status="draft"):
     pages = {}
     summary = ['    <h1>The Cube · Legal documents</h1>',
                '    <p>Each immutable set contains a complete Privacy Policy and Terms of Use. Earlier app versions continue to use the earlier-version policy.</p>',
+               '    <p>Use the highest effective set compatible with your app version. Sets are listed newest first; earlier sets remain available as document history.</p>',
                f'    <p><a href="{MANIFEST_URL}">Version and raw-byte hash manifest</a></p>']
-    for item in sorted(catalog, key=lambda value: value.release["revision"]):
+    for item in sorted(catalog, key=lambda value: value.release["revision"], reverse=True):
         release = item.release
         maximum = release["max_app_version"] or "later"
         summary += [f'    <h2>Legal set {release["revision"]}</h2>',
