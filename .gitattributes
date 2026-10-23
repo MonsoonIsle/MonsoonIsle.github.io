@@ -1,0 +1,3 @@
+# Versioned legal documents are hashed as original bytes by the game.
+en/games/the-arrow/legal/**/*.json -text
+en/games/the-arrow/legal/manifest.json -text

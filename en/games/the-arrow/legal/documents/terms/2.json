@@ -1,0 +1,50 @@
+{
+  "schema_version": 1,
+  "app_id": "com.monsoonisle.thearrow",
+  "language": "en",
+  "kind": "terms",
+  "revision": 2,
+  "title": "Terms of Use",
+  "sections": [
+    {
+      "heading": "Updated October 22, 2026",
+      "body": "These terms cover The Arrow, provided by Monsoon Isle. Contact: aquark314@gmail.com. They describe the conditions for using the game, subject to applicable law."
+    },
+    {
+      "heading": "Using the game",
+      "body": "The Arrow is intended for users aged 13 and over, not children under 13. Store content ratings describe content suitability and do not replace age or consent requirements. If you are a minor or cannot legally agree to these terms, a parent or guardian should review them with you and provide any permission required by local law.\n\nYou may install and play the game for personal, non-commercial entertainment, subject to the applicable app-store license."
+    },
+    {
+      "heading": "Fair and lawful use",
+      "body": "Do not use the game for unlawful activity, distribute malicious or misleading copies, or infringe the rights of others. These terms do not restrict activities that applicable law expressly permits."
+    },
+    {
+      "heading": "Ownership and third-party materials",
+      "body": "The game and its original artwork, audio and other content belong to their respective rights holders. Playing the game does not transfer ownership. Open-source software, fonts and other third-party materials remain governed by their own licenses; these terms do not replace those licenses."
+    },
+    {
+      "heading": "Progress and availability",
+      "body": "The game uses local saves and offers no player account, account-based backup or cloud-save recovery. Deleting app data or changing devices can cause progress to be lost. Unfinished casual and challenge boards can be continued from the home screen. Analytics events are not a saved-game backup and cannot restore your progress.\n\nCore puzzles can be played offline. Ads and ad-based rewards depend on network access and ad availability. Updates may change features or compatibility. We do not promise permanent availability or an error-free experience."
+    },
+    {
+      "heading": "Advertising and rewards",
+      "body": "The Android game uses Google AdMob for rewarded and interstitial ads. Rewarded ads are optional offers for benefits such as a hint, an extra life or extra challenge time. Rewards depend on completing the advertised requirements and the game receiving a successful reward confirmation. An unavailable, interrupted or failed ad may not grant a reward.\n\nInterstitial ads may appear between eligible casual or challenge levels. Third-party ads and external destinations are provided under their providers' terms and policies. Choosing a rewarded ad does not itself give consent to unrelated tracking or personalized advertising."
+    },
+    {
+      "heading": "Purchases and external services",
+      "body": "The current version contains no in-app purchases or subscriptions. Downloads and any store transactions are subject to the store's own terms and applicable consumer rights. Any future paid features will explain their conditions before use. Google and GameAnalytics provide the advertising and analytics services described in the Privacy Policy."
+    },
+    {
+      "heading": "Privacy",
+      "body": "Read the complete Privacy Policy and these Terms of Use before choosing Accept. Your explicit saved acceptance controls game entry and the ordinary Firebase Analytics/GA4, GameAnalytics and Crashlytics Java/NDK processing disclosed in the policy, subject to the applicable age and technical checks. Reading, Back, closing the app or continuing from an old version does not create the new acceptance. Advertising choices remain separate and follow Google UMP; Accept does not grant personalized advertising or every advertising purpose."
+    },
+    {
+      "heading": "Responsibility and your rights",
+      "body": "Use the game with reasonable care and take breaks as needed. To the extent permitted by applicable law, the game is provided as available without additional warranties. Nothing in these terms excludes mandatory consumer rights, liability for fraud or intentional misconduct, or any liability that cannot lawfully be limited."
+    },
+    {
+      "heading": "Stopping use, updates and contact",
+      "body": "You may stop using the game at any time and remove it and its local data. This does not automatically delete information already sent to Google or GameAnalytics; see the Privacy Policy for requests and limitations.\n\nRevised terms will carry a new update date; material changes will be brought to your attention where required. Applicable mandatory law and your available legal remedies remain unaffected. Contact Monsoon Isle at aquark314@gmail.com for game support or questions about these terms."
+    }
+  ]
+}

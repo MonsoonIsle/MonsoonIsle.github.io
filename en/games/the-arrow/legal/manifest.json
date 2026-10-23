@@ -1,0 +1,90 @@
+{
+  "schema_version": 1,
+  "app_id": "com.monsoonisle.thearrow",
+  "language": "en",
+  "releases": [
+    {
+      "revision": 1,
+      "min_app_version": "1.2.1",
+      "max_app_version": null,
+      "effective_date": "2026-10-22",
+      "notice_version": 1,
+      "recipients": [
+        "firebase_analytics",
+        "firebase_crashlytics"
+      ],
+      "privacy": {
+        "revision": 1,
+        "sha256": "cfbd9e2b62b05acfa2e14ec291b98ead8503ba07115f6e2abcd7d0a8102acabd"
+      },
+      "terms": {
+        "revision": 1,
+        "sha256": "a605d5e179eb5d1375ef3964ee734bcc2dd5b319359ebc6cc260587e389b188f"
+      },
+      "purpose_version": 1
+    },
+    {
+      "revision": 2,
+      "min_app_version": "1.2.1",
+      "max_app_version": null,
+      "effective_date": "2026-10-22",
+      "notice_version": 2,
+      "recipients": [
+        "firebase_analytics",
+        "firebase_crashlytics",
+        "gameanalytics"
+      ],
+      "privacy": {
+        "revision": 2,
+        "sha256": "3e4f9dcf73557802e0df003da280c0b59de30846402ceb8d71dd12cb332bafe3"
+      },
+      "terms": {
+        "revision": 2,
+        "sha256": "ae397b709033471540f22ca9891e0e4251d018939dd2fe6be29c9a2357f1ca7b"
+      },
+      "purpose_version": 1
+    },
+    {
+      "revision": 3,
+      "min_app_version": "1.2.3",
+      "max_app_version": null,
+      "effective_date": "2026-10-22",
+      "notice_version": 3,
+      "recipients": [
+        "firebase_analytics",
+        "firebase_crashlytics",
+        "gameanalytics"
+      ],
+      "privacy": {
+        "revision": 3,
+        "sha256": "43358fbcf247ef7c0c67c314a1d4eaa7af832fa85de830a714ce455241081924"
+      },
+      "terms": {
+        "revision": 2,
+        "sha256": "ae397b709033471540f22ca9891e0e4251d018939dd2fe6be29c9a2357f1ca7b"
+      },
+      "purpose_version": 1
+    },
+    {
+      "revision": 4,
+      "min_app_version": "1.2.3",
+      "max_app_version": null,
+      "effective_date": "2026-10-23",
+      "notice_version": 4,
+      "recipients": [
+        "firebase_analytics",
+        "firebase_crashlytics",
+        "gameanalytics"
+      ],
+      "privacy": {
+        "revision": 4,
+        "sha256": "a1a4bdcf9e8ba92e1baffdbe14865129a1f803ab539c01cd99e3dc61c692c359"
+      },
+      "terms": {
+        "revision": 2,
+        "sha256": "ae397b709033471540f22ca9891e0e4251d018939dd2fe6be29c9a2357f1ca7b"
+      },
+      "purpose_version": 1
+    }
+  ]
+}

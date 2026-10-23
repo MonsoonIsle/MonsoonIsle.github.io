@@ -252,6 +252,28 @@ certify legal compliance or prove device delivery of every service.
 
 The existing release checklist below continues to apply to The Arrow.
 
+## The Arrow legal documents and Unity Ads (October 23, 2026)
+
+The current policy at `/en/games/the-arrow/privacy/` is privacy revision 4,
+matching the game's versioned policy including Unity Ads. Complete Privacy Policy
+and Terms of Use, historical JSON documents, and the manifest are also published
+under `/en/games/the-arrow/legal/`. Publishing these documents does not change
+installed game versions or grant consent. Earlier dated Arrow notes below are
+historical; the versioned documents describe the updated client's controls.
+
+The source of legal JSON is the TheArrow repository. Run its
+`tools/sync_legal_documents.py --update --website-root <this checkout>` to prepare
+the legal directory. Keep original JSON bytes intact: `.gitattributes` disables
+newline conversion for those hashed files. When the policy changes, synchronize
+the styled `/privacy/` article from the same sections and update the sitemap.
+
+`app-ads.txt` retains the existing Google direct publisher record and adds the
+162 missing seller records shown in the Unity dashboard on October 23, 2026,
+including `unity.com, 133335680, DIRECT, 96cabb5fbdde37a7`. There are 163 unique
+records. This is a dated dashboard export, not a permanent seller list: obtain
+future changes from Unity and merge without removing unrelated valid records.
+Public file availability and ad-network crawler verification are separate checks.
+
 ## Preview
 
 Run `python -m http.server 8080` from this directory and visit http://localhost:8080/.
