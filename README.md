@@ -5,33 +5,9 @@ Static HTML/CSS site for GitHub Pages. No build step, external fonts or site ana
 - English home: https://monsoonisle.github.io/en/
 - English privacy policy (Google Play): https://monsoonisle.github.io/en/games/the-arrow/privacy/
 
-## Dramadoku privacy policy
+## Dramadoku legal pages
 
-Dramadoku is the **third** homepage game, after The Arrow and The Cube. Its
-English policy is maintained directly in `en/games/dramadoku/privacy/index.html`:
-https://monsoonisle.github.io/en/games/dramadoku/privacy/.
-It is effective and last updated **October 16, 2026**. The user confirmed
-**mengjingchanyu@gmail.com** as the product's public privacy/support contact and
-**13 and over** as its intended audience. This is not an assigned store rating.
-The intended distribution is Google Play-supported countries/regions outside
-China; actual country selection, regional ratings and availability are not yet
-configured or verified. Do not present the game as publicly released.
-
-The policy describes the current offline Android release, package
-`com.monsoonisle.dramadoku`, initially version 0.1.0 / versionCode 1. Source and
-the recorded APK/AAB verification were checked against these disclosures:
-
-- Puzzle state, notes, hints, times/results, preferences and tutorial history are
-  local. No player account, cloud saves, ads, analytics SDK or third-party crash
-  reporting is integrated. The Android release requests only VIBRATE, not
-  INTERNET, and disables Android automatic app-data backup.
-- Support emails are separate voluntary correspondence; the policy explains
-  their use, provider handling, retention criteria and deletion requests.
-- GitHub Pages processes website visit information even though this website has
-  no tracking scripts, cookies or local storage of its own.
-- Publishing this page does not add an in-game policy entry, change the APK/AAB,
-  complete Play Data safety or publish a testing track. The app still needs an
-  accessible policy link or text before the closed-test submission.
+The Dramadoku homepage card links to its [privacy policy](en/games/dramadoku/privacy/index.html) and [terms of use](en/games/dramadoku/terms/index.html). The November 18, 2026 policy covers optional statistics and describes commercial services as plans. The [October 16 policy](en/games/dramadoku/privacy/2026-10-16/index.html) remains available for earlier offline builds. The terms follow the game's bundled English revision 3. Privacy and support requests go to mengjingchanyu@gmail.com.
 
 The card reuses the current 512×512 Android D icon (`assets/dramadoku.png`), an
 interim release asset rather than a newly approved final illustration. Existing
